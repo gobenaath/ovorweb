@@ -44,3 +44,5 @@ PS C:\Users\SibeeshVenu\source\repos\Azure-AI-Image-Text-Reader> npx ngh --dir='
 npx: installed 87 in 8.588s
 Path must be a string. Received undefined
 (node:16984) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+
+git remote set-url https://gobenaath:gobenaath01@github.com/gobenaath/ovorweb.git
