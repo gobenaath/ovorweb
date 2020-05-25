@@ -1,0 +1,19 @@
+/* About */
+.about {
+  background: linear-gradient(105deg,
+      rgba(21, 31, 32, 1) 0%,
+      rgba(21, 31, 32, 0.95) 50%,
+      transparent 50%),
+    url(../../assets/img/about.JPG) center center no-repeat;
+  background-size: cover;
+}
+
+.mission {
+  background: #151f20;
+}
+
+.underline {
+  width: 150px;
+  border: 3px solid #eee;
+  margin: auto;
+}

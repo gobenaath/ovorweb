@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<section class="w-75 mx-auto p-sm-5 p-2 bg-secondary">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h2>Smart Classes</h2>
+        <p class="lead text-light">
+          this is smart class section.asdfasdf a sdfadfa lkasjdfa as;ldkfjaldksjfaldkfja ldkf asdkfjadk
+          dfasld ads
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ng-image-slider [images]="imageObject" infinite=true animationSpeed='0.1' #nav></ng-image-slider>
+      </div>
+    </div>
+
+    <div class="row bg-light p-3">
+      <div class="col-lg-12 border border-dark">
+        <div class="col mt-2">
+          <form>
+            <div class="form-group form-inline">
+              Full text search: <input class="form-control ml-2" type="text" [formControl]="filter" />
+            </div>
+          </form>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">School Name</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Students</th>
+                <th scope="col">Tutors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let school of schools$ | async; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                  <ngb-highlight [result]="school.name" [term]="filter.value"></ngb-highlight>
+                </td>
+                <td>
+                  <ngb-highlight [result]="school.subject" [term]="filter.value"></ngb-highlight>
+                </td>
+                <td>
+                  <ngb-highlight [result]="school.noOfStudents" [term]="filter.value"></ngb-highlight>
+                </td>
+                <td>
+                  <ngb-highlight [result]="school.noOfTutors" [term]="filter.value"></ngb-highlight>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--   total -->
+    <div class="row bg-light p-3">
+      <div class="col-lg-6 border border-dark">
+        <table class="table table-striped">
+          <thead>
+            <tr class="text-center">
+              <th scope="col" colspan="2">Summary One</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let summary of summaryData">
+              <td>
+
+                {{ summary.name }}
+              </td>
+              <td>{{ summary.count }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-6 border border-dark">
+        <table class="table table-striped">
+          <thead>
+            <tr class="text-center">
+              <th scope="col" colspan="3">Summary Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let summary of summaryDataTwo">
+              <td>
+                {{ summary.name }}
+              </td>
+              <td>{{ summary.count }}</td>
+              <td>{{ summary.percent }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>
