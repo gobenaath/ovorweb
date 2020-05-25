@@ -28,11 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## githubpages
 
+Always use same name for project and repository
 https://dzone.com/articles/publish-your-angular-github-repository-as-a-github?fromrel=true
 ng build --prod --base-href "https://gobenaath.github.io/ovorweb/"
 npm i angular-cli-ghpages --save-dev
 
-npx ngh --dir=dist/Azure-AI-Image-Text-Reader
+npx ngh --no-silent --dir=dist/ovorang (I have to use ovorang)
 
 If you are not sure about the difference between npm and npx, I recommend you read my article here.
 
@@ -45,4 +46,5 @@ npx: installed 87 in 8.588s
 Path must be a string. Received undefined
 (node:16984) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
 
-git remote set-url https://gobenaath:gobenaath01@github.com/gobenaath/ovorweb.git
+UserName and Password while npx ngh
+git remote set-url https://<username>:<pw>@github.com/gobenaath/ovorweb.git
