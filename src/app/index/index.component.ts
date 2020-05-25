@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
   images = [
-    '../../assets/img/homebanner.jpg',
-    '../../assets/img/homebanner2.jpg',
-    '../../assets/img/homebanner3.jpg',
+    'assets/img/homebanner.jpg',
+    'assets/img/homebanner2.jpg',
+    'assets/img/homebanner3.jpg',
   ];
 
   constructor() {}
