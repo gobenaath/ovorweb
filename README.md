@@ -46,5 +46,5 @@ npx: installed 87 in 8.588s
 Path must be a string. Received undefined
 (node:16984) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
 
-UserName and Password while npx ngh
+UserName and Password while npx ngh due to old git us/pw
 git remote set-url https://<username>:<pw>@github.com/gobenaath/ovorweb.git
