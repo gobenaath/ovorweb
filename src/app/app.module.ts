@@ -1,3 +1,4 @@
+import { BackendServiceService } from './service/backend-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -35,7 +36,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FormsModule,
     NgImageSliderModule,
   ],
-  providers: [DecimalPipe],
+  providers: [DecimalPipe, BackendServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

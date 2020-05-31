@@ -1,4 +1,6 @@
+import { BackendServiceService } from './../service/backend-service.service';
 import { Component, OnInit } from '@angular/core';
+import { HomeData } from '../model/homeData';
 
 @Component({
   selector: 'app-index',
@@ -12,7 +14,16 @@ export class IndexComponent implements OnInit {
     'assets/img/homebanner3.jpg',
   ];
 
-  constructor() {}
+  homeData: HomeData[];
 
-  ngOnInit(): void {}
+  constructor(private backEndService: BackendServiceService) {}
+
+  ngOnInit(): void {
+    this.backEndService.getHomePageData().subscribe({
+      next: (x) => {
+        this.homeData = x;
+      },
+      error: (err) => console.error('Error while retreiving homedata: ' + err),
+    });
+  }
 }
