@@ -1,0 +1,58 @@
+<app-header></app-header>
+
+<section class="w-75 mx-auto">
+  <div class="container-fluid bg-secondary">
+    <div class="row pt-3 pb-3">
+      <div class="col text-center">
+        <h1>{{detailData.title}} </h1>
+      </div>
+    </div>
+
+    <div class="card description-bg">
+      <div class="card-header">
+        <h3>{{detailData.description}}</h3>
+        <p>Village: {{detailData.village}}</p>
+        <p>District: {{detailData.district}}</p>
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-title">{{detailData.subSection.heading}}</h5>
+        <p class="card-text" *ngFor="let keyData of detailData.subSection.keyValueData">
+          <span>{{keyData.key}}</span> : {{keyData.value}}
+        </p>
+      </div>
+    </div>
+
+    <div class="row p-2 bg-primary">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header text-center">Before</div>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-center">
+
+              <div class="newImgContainer">
+                <img [src]="detailData.compareImages.beforeImages[0]" class="Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header text-center">After</div>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-center">
+
+              <div class="newImgContainer">
+                <img [src]="detailData.compareImages.afterImages[0]" class="Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<app-footer></app-footer>

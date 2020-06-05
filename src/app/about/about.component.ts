@@ -1,4 +1,3 @@
-import { BackendServiceService } from './../service/backend-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  constructor(private backendSerivce: BackendServiceService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    console.log(
-      'this is backend data ' + this.backendSerivce.getHomePageData()
-    );
-  }
+  ngOnInit(): void {}
 }

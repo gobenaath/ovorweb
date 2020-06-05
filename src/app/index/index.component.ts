@@ -1,4 +1,5 @@
-import { BackendServiceService } from './../service/backend-service.service';
+import { HomeBackendService } from './../service/home-backend.service';
+
 import { Component, OnInit } from '@angular/core';
 import { HomeData } from '../model/homeData';
 
@@ -16,10 +17,10 @@ export class IndexComponent implements OnInit {
 
   homeData: HomeData[];
 
-  constructor(private backEndService: BackendServiceService) {}
+  constructor(private homeBackendService: HomeBackendService) {}
 
   ngOnInit(): void {
-    this.backEndService.getHomePageData().subscribe({
+    this.homeBackendService.getHomePageData().subscribe({
       next: (x) => {
         this.homeData = x;
       },

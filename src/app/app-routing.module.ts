@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { IndexComponent } from './index/index.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DetailPageComponent } from './detail-page/detail-page.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'schoolActivities', component: SchoolActivitiesComponent },
   { path: 'smartClasses', component: SmartClassesComponent },
+  { path: 'detailData', component: DetailPageComponent },
 ];
 
 @NgModule({

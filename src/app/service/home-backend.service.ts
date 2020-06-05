@@ -5,7 +5,7 @@ import { HomeData } from '../model/homeData';
 @Injectable({
   providedIn: 'root',
 })
-export class BackendServiceService {
+export class HomeBackendService {
   constructor() {}
 
   getHomePageData(): Observable<HomeData[]> {
@@ -43,6 +43,11 @@ const HomePageData = [
   },
   {
     url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm_inaug.jpg',
+    title: 'Smart Class',
+    description: 'Smart classes in our village',
+  },
+  {
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm7.jpg',
     title: 'Smart Class',
     description: 'Smart classes in our village',
   },

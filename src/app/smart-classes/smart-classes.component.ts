@@ -1,9 +1,12 @@
+import { HomeBackendService } from './../service/home-backend.service';
+import { SmartClassesBackendService } from './../service/smart-classes-backend.service';
 import { Component, OnInit, PipeTransform } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { DecimalPipe } from '@angular/common';
 
 import { map, startWith } from 'rxjs/operators';
+import { HomeData } from '../model/homeData';
 
 @Component({
   selector: 'app-smart-classes',
@@ -15,20 +18,48 @@ export class SmartClassesComponent implements OnInit {
   filter = new FormControl('');
   summaryData: Summary[];
   summaryDataTwo: Summary[];
-  imageObject: Array<object>;
+  imageObject: Array<Object> = [];
 
-  constructor() {
+  constructor(
+    private smartClassesBackendService: SmartClassesBackendService,
+    private homeBackendService: HomeBackendService
+  ) {
     this.schools$ = this.filter.valueChanges.pipe(
       startWith(''),
       map((text) => search(text))
     );
     this.summaryData = SummaryData;
     this.summaryDataTwo = SummaryDataTwo;
-    this.imageObject = imageObject;
+    homeBackendService.getHomePageData().subscribe({
+      next: (x) => {
+        //this.imageObject = x;
+
+        x.forEach((item) => {
+          let homeData: HomeData = item;
+          let object = {
+            image: homeData.url,
+            thumbImage: homeData.url,
+            alt: homeData.title,
+            title: homeData.title,
+          };
+          this.imageObject.push(object);
+        });
+      },
+      error: (err) => console.error('Error while retreiving homedata: ' + err),
+    });
   }
 
   ngOnInit(): void {}
 }
+
+/* const imageObject: Array<object> = [
+  {
+    image: 'assets/img/smartclasses/1.jpg',
+    thumbImage: 'assets/img/smartclasses/1_t.jpg',
+    alt: 'alt of image',
+    title: 'title of image',
+  };
+] */
 //https://www.npmjs.com/package/ng-image-slider
 interface School {
   name: string;
@@ -36,45 +67,6 @@ interface School {
   noOfTutors: number;
   noOfStudents: number;
 }
-
-const imageObject: Array<object> = [
-  {
-    image: 'assets/img/smartclasses/1.jpg',
-    thumbImage: 'assets/img/smartclasses/1_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-  {
-    image: 'assets/img/smartclasses/2.jpg',
-    thumbImage: 'assets/img/smartclasses/2_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-  {
-    image: 'assets/img/smartclasses/3.jpg',
-    thumbImage: 'assets/img/smartclasses/3_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-  {
-    image: 'assets/img/smartclasses/4.jpg',
-    thumbImage: 'assets/img/smartclasses/4_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-  {
-    image: 'assets/img/smartclasses/5.jpg',
-    thumbImage: 'assets/img/smartclasses/5_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-  {
-    image: 'assets/img/smartclasses/6.jpg',
-    thumbImage: 'assets/img/smartclasses/6_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  },
-];
 
 const SCHOOLS: School[] = [
   {

@@ -1,4 +1,4 @@
-import { BackendServiceService } from './service/backend-service.service';
+import { HomeBackendService } from './service/home-backend.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +16,8 @@ import { SmartClassesComponent } from './smart-classes/smart-classes.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DecimalPipe } from '@angular/common';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { SmartClassesBackendService } from './service/smart-classes-backend.service';
+import { DetailPageComponent } from './detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     NewsComponent,
     SchoolActivitiesComponent,
     SmartClassesComponent,
+    DetailPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FormsModule,
     NgImageSliderModule,
   ],
-  providers: [DecimalPipe, BackendServiceService],
+  providers: [DecimalPipe, HomeBackendService, SmartClassesBackendService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

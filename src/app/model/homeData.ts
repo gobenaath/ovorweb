@@ -1,9 +1,9 @@
-import { Url } from 'url';
-
 class HomeData {
   url: string;
   title: string;
   description: string;
 }
 
-export { HomeData };
+class SmartClassData extends HomeData {}
+
+export { HomeData, SmartClassData };
