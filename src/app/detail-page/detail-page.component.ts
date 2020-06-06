@@ -1,6 +1,8 @@
+import { VillageActivitiesBackendService } from './../service/village-activities-backend.service';
 import { SmartClassesBackendService } from './../service/smart-classes-backend.service';
 import { Component, OnInit } from '@angular/core';
 import { DetailData } from '../model/detailData';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail-page',
@@ -9,14 +11,23 @@ import { DetailData } from '../model/detailData';
 })
 export class DetailPageComponent implements OnInit {
   detailData: DetailData;
-  constructor(private smartClassesBackendService: SmartClassesBackendService) {}
+  constructor(
+    private smartClassesBackendService: SmartClassesBackendService,
+    private villageActivitiesBackendService: VillageActivitiesBackendService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.smartClassesBackendService.getSchoolActivities().subscribe({
+    console.log(
+      'this.route.snapshot.params.id  ' + this.route.snapshot.params.id
+    );
+    this.villageActivitiesBackendService.getVillageActivities().subscribe({
       next: (x) => {
         //this.imageObject = x;
 
-        this.detailData = x[0];
+        this.detailData = x.find(
+          (data) => data.id === Number(this.route.snapshot.params.id)
+        );
         console.log('detail data ' + JSON.stringify(this.detailData));
       },
       error: (err) =>

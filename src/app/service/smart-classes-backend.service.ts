@@ -20,6 +20,7 @@ export class SmartClassesBackendService {
 
 const SmartClassPageData = [
   {
+    id: 1,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm7.jpg',
     title: 'Smart Class',
     description: 'Smart classes in our village',
@@ -28,6 +29,7 @@ const SmartClassPageData = [
 
 const SchoolActivitiesData = [
   {
+    id: 1,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm7.jpg',
     title: 'Government Primary School',
     description: 'Ground Clean Up and Tree Plantation',
@@ -48,10 +50,19 @@ const SchoolActivitiesData = [
         },
       ],
     },
-    compareImages: {
-      beforeImages: ['assets/img/smartclasses/1.jpg'],
-      afterImages: ['assets/img/smartclasses/2.jpg'],
+    compareImages: [
+      {
+        title: 'Canal 1 Desiltation',
+        description: 'Desilting canal 1',
+        beforeImages: ['assets/img/smartclasses/1.jpg'],
+        afterImages: ['assets/img/smartclasses/2.jpg'],
+      },
+    ],
+    commonImages: {
+      title: 'Govt Officials Inspection',
+      description:
+        'Tahsildar, Revenue Inspector, Village Administration officer & Thandal inspecting the work done',
+      otherImages: ['assets/img/smartclasses/3.jpg'],
     },
-    mainImages: ['assets/img/smartclasses/3.jpg'],
   },
 ];

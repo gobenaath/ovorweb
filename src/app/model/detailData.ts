@@ -6,9 +6,10 @@ class DetailData extends HomeData {
   village: string;
   district: string;
   detailDescription: string;
+  htmlContent?: string;
   subSection: SubSection;
-  compareImages: CompareImage;
-  mainImages: string[];
+  compareImages: CompareImage[];
+  commonImages: CompareImage;
 }
 
 class SubSection {

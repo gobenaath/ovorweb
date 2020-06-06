@@ -1,3 +1,5 @@
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { VillageActivitiesBackendService } from './service/village-activities-backend.service';
 import { HomeBackendService } from './service/home-backend.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,6 +20,9 @@ import { DecimalPipe } from '@angular/common';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { SmartClassesBackendService } from './service/smart-classes-backend.service';
 import { DetailPageComponent } from './detail-page/detail-page.component';
+import { VillageActiviesComponent } from './village-activies/village-activies.component';
+import { CompletedComponent } from './school-activities/completed/completed.component';
+import { UpcomingComponent } from './school-activities/upcoming/upcoming.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,9 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
     SchoolActivitiesComponent,
     SmartClassesComponent,
     DetailPageComponent,
+    VillageActiviesComponent,
+    CompletedComponent,
+    UpcomingComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,8 +46,14 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
     ReactiveFormsModule,
     FormsModule,
     NgImageSliderModule,
+    TabsModule.forRoot(),
   ],
-  providers: [DecimalPipe, HomeBackendService, SmartClassesBackendService],
+  providers: [
+    DecimalPipe,
+    HomeBackendService,
+    SmartClassesBackendService,
+    VillageActivitiesBackendService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

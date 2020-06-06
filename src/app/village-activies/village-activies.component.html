@@ -1,0 +1,47 @@
+<app-header></app-header>
+<section class="w-75 mx-auto p-sm-5 p-2 bg-secondary">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h2>School Activities</h2>
+        <p class="lead text-light">
+          this is village activies generic description.asdfasdf a sdfadfa lkasjdfa as;ldkfjaldksjfaldkfja ldkf asdkfjadk
+          dfasld ads
+        </p>
+      </div>
+    </div>
+    <div class="row" *ngFor="let data of villageActivitiesData">
+      <div class="col-lg-4 col-sm-10 mx-auto mb-4">
+        <div class="card">
+          <img [src]="data.url" class="card-img-top" />
+          <div class="card-body">
+            <div class="card-title">
+              <h3 class="text-muted">{{data.title}}</h3>
+            </div>
+            <div class="card-subtitle">
+              <p class="lead text-secondary">{{data.description}}</p>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <a class="btn btn-primary" [routerLink]="['/detailActivity','va',data.id]">
+                  More Info
+                </a>
+              </div>
+              <div class="col-6 text-right">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x mx-2 text-primary"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube fa-2x mx-2 text-danger"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<app-footer></app-footer>

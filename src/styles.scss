@@ -22,3 +22,10 @@ img.Image {
   width: 300px;
   height: 300px;
 }
+
+.img-in-div {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 10px;
+}
