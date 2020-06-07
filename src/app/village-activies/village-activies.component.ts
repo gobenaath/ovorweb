@@ -25,12 +25,4 @@ export class VillageActiviesComponent implements OnInit {
         console.error('Error while retreiving detail data: ' + err),
     });
   }
-  detailPage(id: number) {
-    console.log('id clicked ' + id);
-  }
-
-  myParamObj(id: number) {
-    console.log('id obj' + id);
-    return {};
-  }
 }

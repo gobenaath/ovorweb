@@ -2,7 +2,7 @@ class HomeData {
   id: number;
   url: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 class SmartClassData extends HomeData {}

@@ -14,28 +14,41 @@
 
     <div class="card description-bg">
       <div class="card-header text-center">
-        <h3>{{detailData.description}}</h3>
-        <div *ngIf="detailData.detailDescription">
-          <p>{{detailData.detailDescription}}</p>
+        <h3>{{detailData.subTitle}}</h3>
+        <div *ngIf="detailData.description">
+          <p>{{detailData.description}}</p>
         </div>
+
+
+
+
+      </div>
+      <div class="card-body text-left bg-primary m-3" style="border-radius: 10px;" *ngIf="detailData.mainListSection">
+        <h5 class="card-title">{{detailData.mainListSection.heading}}</h5>
+        <p class="card-text" *ngFor="let keyData of detailData.mainListSection.keyValueData">
+          <span class="font-weight: bold;">{{keyData.key}}</span> : {{keyData.value}}
+        </p>
+      </div>
+
+      <div class="card-body text-left" *ngIf="detailData.htmlContent">
         <div class="bg-warning p-2">
           <div *ngIf="detailData.htmlContent" class="mt-2">
             <p [innerHTML]="detailData.htmlContent"></p>
           </div>
         </div>
-
       </div>
-      <div class="card-body text-center" *ngIf="detailData.subSection">
+
+      <div class="card-body text-center bg-primary m-3" style="border-radius: 10px;" *ngIf="detailData.subSection">
         <h5 class="card-title">{{detailData.subSection.heading}}</h5>
         <p class="card-text" *ngFor="let keyData of detailData.subSection.keyValueData">
-          <span class="font-weight: bold;">{{keyData.key}}</span> : {{keyData.value}}
+          <span> <b>{{keyData.key}} : </b></span> {{keyData.value}}
         </p>
       </div>
     </div>
 
     <div *ngIf="detailData.compareImages">
       <div class="card mt-3" *ngFor="let compareImage of detailData.compareImages">
-        <div class="card-header text-center">
+        <div class="card-header text-center" *ngIf="compareImage.title">
           <h5>{{compareImage.title}}</h5>
         </div>
         <div class="card-body text-center">
@@ -72,16 +85,20 @@
       </div>
     </div>
 
-    <div class="card mt-3" *ngIf="detailData.commonImages">
-      <div class="card-header text-center">
-        <h5>{{detailData.commonImages.title}}</h5>
-      </div>
-      <div class="card-body text-center">
-        <p class="card-text">{{detailData.commonImages.description}}
-        </p>
-        <div *ngFor="let imageUrl of detailData.commonImages.otherImages" class="m-2">
-          <img [src]="imageUrl" class="img-in-div text-center" />
+    <div *ngIf="detailData.commonImages">
+      <div class="card mt-3" *ngFor="let data of detailData.commonImages">
+
+        <div class="card-header text-center" *ngIf="data.title">
+          <h5>{{data.title}}</h5>
         </div>
+        <div class="card-body text-center">
+          <p class="card-text">{{data.description}}
+          </p>
+          <div *ngFor="let imageUrl of data.otherImages" class="m-2">
+            <img [src]="imageUrl" class="img-in-div text-center" />
+          </div>
+        </div>
+
       </div>
     </div>
 

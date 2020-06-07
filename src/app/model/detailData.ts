@@ -5,15 +5,17 @@ import { CompareImage } from './compareImage';
 class DetailData extends HomeData {
   village: string;
   district: string;
-  detailDescription: string;
+  subTitle?: string;
+  mainListSection?: SubSection;
   htmlContent?: string;
-  subSection: SubSection;
-  compareImages: CompareImage[];
-  commonImages: CompareImage;
+  subSection?: SubSection;
+  compareImages?: CompareImage[];
+  commonImages?: CompareImage[];
+  completed?: boolean;
 }
 
 class SubSection {
-  heading: string;
+  heading?: string;
   keyValueData: KeyValue[];
 }
 

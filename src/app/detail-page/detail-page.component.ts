@@ -21,17 +21,34 @@ export class DetailPageComponent implements OnInit {
     console.log(
       'this.route.snapshot.params.id  ' + this.route.snapshot.params.id
     );
-    this.villageActivitiesBackendService.getVillageActivities().subscribe({
-      next: (x) => {
-        //this.imageObject = x;
 
-        this.detailData = x.find(
-          (data) => data.id === Number(this.route.snapshot.params.id)
-        );
-        console.log('detail data ' + JSON.stringify(this.detailData));
-      },
-      error: (err) =>
-        console.error('Error while retreiving detail data: ' + err),
-    });
+    let src: string = this.route.snapshot.params.src;
+    if (src === 'va') {
+      this.villageActivitiesBackendService.getVillageActivities().subscribe({
+        next: (x) => {
+          //this.imageObject = x;
+
+          this.detailData = x.find(
+            (data) => data.id === Number(this.route.snapshot.params.id)
+          );
+          console.log('detail data ' + JSON.stringify(this.detailData));
+        },
+        error: (err) =>
+          console.error('Error while retreiving detail data: ' + err),
+      });
+    } else if (src === 'sa') {
+      this.smartClassesBackendService.getSchoolActivities().subscribe({
+        next: (x) => {
+          //this.imageObject = x;
+
+          this.detailData = x.find(
+            (data) => data.id === Number(this.route.snapshot.params.id)
+          );
+          console.log('detail data ' + JSON.stringify(this.detailData));
+        },
+        error: (err) =>
+          console.error('Error while retreiving detail data: ' + err),
+      });
+    }
   }
 }
