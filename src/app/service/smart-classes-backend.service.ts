@@ -29,24 +29,39 @@ const SmartClassPageData = [
 
 const SchoolActivitiesData = [
   {
-    id: 3,
-    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa1_2.jpg',
-    title: 'Government Primary School',
-    subTitle: 'Ground Clean Up and Tree Plantation',
+    id: 6,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa5_1.jpg',
+    title: 'Kottaiyur Government Primary School',
+    subTitle: 'To install Benches, Fan and Tables for Students',
     village: 'Kottaiyur',
     district: 'Virudhunagar',
-    description:
-      'Kavitha K Pandian secured approval from Block Development Officer & a copy was sent to District Collector , Virudhunagar to adopt Kottaiyur Village.',
-    subSection: {
-      heading: 'Ground Clean Up & Tree Plantation (55 planted, 30 survived)',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa6_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa6_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa5_1.jpg',
+    title: 'Government Higher School',
+    subTitle: 'Two toilets for Lady Teachers & 4 for Girl Students',
+    village: 'Thailapuram',
+    completed: true,
+    mainListSection: {
+      heading: 'Expenses Details',
       keyValueData: [
         {
-          key: 'Expense',
-          value: 'Rs. 3000 for ground clean up & Tree plantation',
+          key: 'Funded by',
+          value:
+            'Crowd Funding Edudharma Rs. 1,21,118 Balance by Arunmanian’s donation',
         },
         {
-          key: 'Funding Partners',
-          value: 'Crowd Funding by Village Youngsters',
+          key: 'Total expense',
+          value: 'Rs. 1,36,677',
         },
       ],
     },
@@ -54,9 +69,69 @@ const SchoolActivitiesData = [
     commonImages: [
       {
         otherImages: [
-          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa1_1.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa1_2.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa1_3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa5_1.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa4_1.jpg',
+    title: 'Government Middle School',
+    subTitle: 'Smart Class Setup',
+    village: 'Edayathankudi',
+    district: 'Ariyaloor',
+    completed: true,
+    description:
+      'Our Team member Dr. Hema, in association with Emelda Queen & Annapurna accomplished the Set up of Smart Class, for students.',
+
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa4_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa4_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa3_1.jpg',
+    title: 'Government School',
+    subTitle: 'Smart Class Setup',
+    village: 'Vanaveretty',
+    district: 'Villupuram',
+    completed: true,
+    description:
+      'Our Team member Dr. Hema, Mani in association with Annapurna accomplished the Set up of Smart Class, Restoration of Classroom along with furniture for students @ Total expense of Rs. 2,30,000',
+    subSection: {
+      heading: 'Sponsors',
+      keyValueData: [
+        {
+          key: 'Funded by',
+          value:
+            'Mani, Village youngsters Rs. 1,50,000 for all the work, labor & furniture',
+        },
+        {
+          key: 'Funded by',
+          value: 'Hema Rs. 80,000 for Smart class',
+        },
+        {
+          key: 'Project Start Date',
+          value: '9.9.17',
+        },
+        {
+          key: 'Project End Date',
+          value: '25.9.17',
+        },
+      ],
+    },
+
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa3_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa3_2.jpg',
         ],
       },
     ],
@@ -68,6 +143,7 @@ const SchoolActivitiesData = [
     subTitle: 'Smart class inaugurated by MLA Chandra Prabha',
     village: 'Thailapuram',
     district: 'Virudhunagar',
+    completed: true,
     mainListSection: {
       heading: 'Expenses Details',
       keyValueData: [
@@ -138,6 +214,7 @@ const SchoolActivitiesData = [
     subTitle: 'Ground Clean Up and Tree Plantation',
     village: 'Kottaiyur',
     district: 'Virudhunagar',
+    completed: true,
     description:
       'Kavitha K Pandian secured approval from Block Development Officer & a copy was sent to District Collector , Virudhunagar to adopt Kottaiyur Village.',
     subSection: {

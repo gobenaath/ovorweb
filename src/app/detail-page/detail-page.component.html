@@ -7,8 +7,8 @@
         <h1>{{detailData.title}} </h1>
       </div>
       <div class="col text-center col-sm-3 bg-white m-2">
-        <p class="p-0 m-0">Village: {{detailData.village}}</p>
-        <p class="p-0 m-0">District: {{detailData.district}}</p>
+        <p class="p-0 m-0" *ngIf="detailData.village">Village: {{detailData.village}}</p>
+        <p class="p-0 m-0" *ngIf="detailData.district">District: {{detailData.district}}</p>
       </div>
     </div>
 

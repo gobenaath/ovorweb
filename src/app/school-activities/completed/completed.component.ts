@@ -18,7 +18,9 @@ export class CompletedComponent implements OnInit {
       next: (x) => {
         //this.imageObject = x;
 
-        this.completedSchoolActivitiesData = x;
+        this.completedSchoolActivitiesData = x.filter(
+          (activity) => activity.completed === true
+        );
       },
       error: (err) =>
         console.error('Error while retreiving detail data: ' + err),

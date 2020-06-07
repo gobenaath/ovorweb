@@ -3,8 +3,8 @@ import { KeyValue } from './keyValue';
 import { CompareImage } from './compareImage';
 
 class DetailData extends HomeData {
-  village: string;
-  district: string;
+  village?: string;
+  district?: string;
   subTitle?: string;
   mainListSection?: SubSection;
   htmlContent?: string;

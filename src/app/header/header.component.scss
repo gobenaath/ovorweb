@@ -2,14 +2,22 @@
   outline: none !important;
   border: none;
   font-size: 2.2rem;
-  color: var(--mainBlue) !important;
+  color: blue !important;
 }
 
 .nav-link {
   font-size: 1.6rem;
-  border-bottom: 0.1rem solid var(--mainWhite);
+  border-bottom: 0.1rem solid white;
 }
 
 .nav-active {
-  border-bottom: 0.1rem solid var(--mainBlue);
+  border-bottom: 0.1rem solid black;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+ul>li {
+  text-align: center;
 }

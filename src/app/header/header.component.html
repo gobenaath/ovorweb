@@ -39,22 +39,22 @@
     </button>
     <div class="collapse navbar-collapse" id="ovorNavBar">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item mx-2 nav-active">
+        <li class="nav-item mx-2" [className]="urlString === '/' ? 'nav-active' : ''">
           <a routerLink="/" class="nav-link">Home</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-2" [className]="urlString === '/news' ? 'nav-active' : ''">
           <a routerLink="/news" class="nav-link">News</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-2" [className]="getUrl() === '/schoolActivities' ? 'nav-active' : ''">
           <a routerLink="/schoolActivities" class="nav-link">School Activities</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-2" [className]="getUrl() === '/villageActivities' ? 'nav-active' : ''">
           <a routerLink="/villageActivities" class="nav-link">Village Activities</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-2" [className]="urlString === '/smartClasses' ? 'nav-active' : ''">
           <a routerLink="/smartClasses" class="nav-link">Smart Classes</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-2" [className]="urlString === '/about' ? 'nav-active' : ''">
           <a routerLink="/about" class="nav-link">About</a>
         </li>
       </ul>
