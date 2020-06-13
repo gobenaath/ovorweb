@@ -8,6 +8,10 @@ import { DetailData } from '../model/detailData';
   styleUrls: ['./village-activies.component.scss'],
 })
 export class VillageActiviesComponent implements OnInit {
+  pageTitle: string = 'Village Activities';
+  pageDescription: string =
+    'This is village activities.  asdasaa  dfadfk jsdflk lkasjdf ldksfja asdlfadkjasldf asdlf aslkdfajdf zadfklsdf dflk';
+
   villageActivitiesData: DetailData[];
 
   constructor(

@@ -1,20 +1,13 @@
 <app-header></app-header>
 
-<section class="w-75 mx-auto p-sm-5 p-2 bg-secondary">
+<section class="mx-auto bg-main">
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="col text-center mb-3">
-        <h2>Smart Classes</h2>
-        <p class="lead text-light">
-          this is smart class section.asdfasdf a sdfadfa lkasjdfa as;ldkfjaldksjfaldkfja ldkf asdkfjadk
-          dfasld ads
-        </p>
-      </div>
-    </div>
+    <app-page-description [title]=pageTitle [description]=pageDescription></app-page-description>
+
     <div class="row">
       <div class="col">
-        <ng-image-slider [images]="imageObject" infinite=true animationSpeed='0.1' #nav></ng-image-slider>
+        <ng-image-slider [images]="imageObject" infinite=true animationSpeed=1 autoSlide=1 #nav></ng-image-slider>
       </div>
     </div>
 

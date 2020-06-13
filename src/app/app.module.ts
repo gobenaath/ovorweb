@@ -23,6 +23,7 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 import { VillageActiviesComponent } from './village-activies/village-activies.component';
 import { CompletedComponent } from './school-activities/completed/completed.component';
 import { UpcomingComponent } from './school-activities/upcoming/upcoming.component';
+import { PageDescriptionComponent } from './shared/page-description/page-description.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { UpcomingComponent } from './school-activities/upcoming/upcoming.compone
     VillageActiviesComponent,
     CompletedComponent,
     UpcomingComponent,
+    PageDescriptionComponent,
   ],
   imports: [
     BrowserModule,

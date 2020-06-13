@@ -14,6 +14,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.url);
     this.urlString = this.router.url;
+    /* let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    console.log('called...');
+    navBarToggle.addEventListener('click', function () {
+      console.log('binging...');
+      mainNav.classList.toggle('active');
+    }); */
   }
 
   getUrl() {

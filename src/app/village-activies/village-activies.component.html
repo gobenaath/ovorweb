@@ -1,26 +1,18 @@
 <app-header></app-header>
-<section class="w-75 mx-auto p-sm-5 p-2 bg-secondary">
+<section class="mx-auto bg-main">
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="col text-center mb-3">
-        <h2>Village Activities</h2>
-        <p class="lead text-light">
-          this is village activies generic description.asdfasdf a sdfadfa lkasjdfa as;ldkfjaldksjfaldkfja ldkf asdkfjadk
-          dfasld ads
-        </p>
-      </div>
-    </div>
-    <div class="row" *ngFor="let data of villageActivitiesData">
-      <div class="col-lg-4 col-sm-10 mx-auto mb-4">
-        <div class="card">
+    <app-page-description [title]=pageTitle [description]=pageDescription></app-page-description>
+    <div class="row bg-second" *ngFor="let data of villageActivitiesData">
+      <div class="col-lg-4 col-sm-10 mx-auto m-4">
+        <div class=" card">
           <img [src]="data.url" class="card-img-top" />
           <div class="card-body">
             <div class="card-title">
-              <h3 class="text-muted">{{data.title}}</h3>
+              <h4 class="sub-heading">{{data.title}}</h4>
             </div>
             <div class="card-subtitle">
-              <p class="lead text-secondary">{{data.subTitle}}</p>
+              <p class="lead">{{data.subTitle}}</p>
             </div>
             <div class="row">
               <div class="col-6">

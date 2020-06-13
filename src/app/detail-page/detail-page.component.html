@@ -1,45 +1,51 @@
 <app-header></app-header>
 
-<section class="w-75 mx-auto">
-  <div class="container-fluid bg-secondary">
+<section class="mx-auto">
+  <div class="container-fluid bg-main">
     <div class="row pt-3 pb-3">
-      <div class="col text-center col-sm-8">
-        <h1>{{detailData.title}} </h1>
+      <div class="d-flex align-items-center col-lg-7 normal-sub-heading justify-content-center">
+        <h1 class="m-0 p-0">{{detailData.title}} </h1>
       </div>
-      <div class="col text-center col-sm-3 bg-white m-2">
-        <p class="p-0 m-0" *ngIf="detailData.village">Village: {{detailData.village}}</p>
-        <p class="p-0 m-0" *ngIf="detailData.district">District: {{detailData.district}}</p>
+      <div class="d-flex justify-content-center col-lg-4 bg-fifth " style="border-radius: 25px;"
+        *ngIf="detailData.village || detailData.district">
+        <div class="p-3 ">
+          <div class="row normal-sub-heading ">
+            <div class="col-4 " *ngIf="detailData.village">Village:</div>
+            <div class="col-6 " *ngIf="detailData.village">{{detailData.village}}</div>
+            <div class="col-4 " *ngIf="detailData.district">District:</div>
+            <div class="col-6 " *ngIf="detailData.district">{{detailData.district}}</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card description-bg">
-      <div class="card-header text-center">
-        <h3>{{detailData.subTitle}}</h3>
+
+
+    <div class="card">
+      <div class="card-header text-center ">
+        <h4 class="sub-heading">{{detailData.subTitle}}</h4>
         <div *ngIf="detailData.description">
-          <p>{{detailData.description}}</p>
+          <p class="font-dancing-script">{{detailData.description}}</p>
         </div>
 
-
-
-
       </div>
-      <div class="card-body text-left bg-primary m-3" style="border-radius: 10px;" *ngIf="detailData.mainListSection">
-        <h5 class="card-title">{{detailData.mainListSection.heading}}</h5>
+      <div class="card-body text-left m-3 bg-third" style="border-radius: 10px;" *ngIf="detailData.mainListSection">
+        <h5 class="card-title normal-sub-heading">{{detailData.mainListSection.heading}}</h5>
         <p class="card-text" *ngFor="let keyData of detailData.mainListSection.keyValueData">
-          <span class="font-weight: bold;">{{keyData.key}}</span> : {{keyData.value}}
+          <b>{{keyData.key}}</b> : {{keyData.value}}
         </p>
       </div>
 
-      <div class="card-body text-left" *ngIf="detailData.htmlContent">
-        <div class="bg-warning p-2">
+      <div class="card-body text-left bg-fifth m-3" *ngIf="detailData.htmlContent">
+        <div class="p-2">
           <div *ngIf="detailData.htmlContent" class="mt-2">
             <p [innerHTML]="detailData.htmlContent"></p>
           </div>
         </div>
       </div>
 
-      <div class="card-body text-center bg-primary m-3" style="border-radius: 10px;" *ngIf="detailData.subSection">
-        <h5 class="card-title">{{detailData.subSection.heading}}</h5>
+      <div class="card-body text-center m-3 bg-fourth" style="border-radius: 10px;" *ngIf="detailData.subSection">
+        <h4 class="card-title normal-sub-heading">{{detailData.subSection.heading}}</h4>
         <p class="card-text" *ngFor="let keyData of detailData.subSection.keyValueData">
           <span> <b>{{keyData.key}} : </b></span> {{keyData.value}}
         </p>
@@ -48,7 +54,7 @@
 
     <div *ngIf="detailData.compareImages">
       <div class="card mt-3" *ngFor="let compareImage of detailData.compareImages">
-        <div class="card-header text-center" *ngIf="compareImage.title">
+        <div class="card-header text-center bg-third sub-heading" *ngIf="compareImage.title">
           <h5>{{compareImage.title}}</h5>
         </div>
         <div class="card-body text-center">
@@ -56,7 +62,7 @@
             <div class="col-md-6">
               <div class="text-center"></div>
               <div class="card">
-                <div class="card-header text-center" style="border-bottom: 0px;">Before</div>
+                <div class="card-header text-center bg-main normal-sub-heading" style="border-bottom: 0px;">Before</div>
                 <div class="card-body">
                   <div class="">
 
@@ -69,7 +75,7 @@
             </div>
             <div class="col-md-6">
               <div class="card">
-                <div class="card-header text-center" style="border-bottom: 0px;">After</div>
+                <div class="card-header text-center bg-main normal-sub-heading" style="border-bottom: 0px;">After</div>
                 <div class="card-body">
                   <div class="">
 
@@ -88,14 +94,14 @@
     <div *ngIf="detailData.commonImages">
       <div class="card mt-3" *ngFor="let data of detailData.commonImages">
 
-        <div class="card-header text-center" *ngIf="data.title">
+        <div class="card-header text-center bg-third sub-heading" *ngIf="data.title">
           <h5>{{data.title}}</h5>
         </div>
-        <div class="card-body text-center">
+        <div class="card-body text-center bg-main normal-sub-heading">
           <p class="card-text">{{data.description}}
           </p>
-          <div *ngFor="let imageUrl of data.otherImages" class="m-2">
-            <img [src]="imageUrl" class="img-in-div text-center" />
+          <div *ngFor="let imageUrl of data.otherImages" class="m-3">
+            <img [src]="imageUrl" class="img-in-div text-center shadow-box" />
           </div>
         </div>
 

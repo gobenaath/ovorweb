@@ -14,6 +14,10 @@ import { HomeData } from '../model/homeData';
   styleUrls: ['./smart-classes.component.scss'],
 })
 export class SmartClassesComponent implements OnInit {
+  pageTitle: string = 'Smart Class';
+  pageDescription: string =
+    'This is smart class.  alsdfkfka fda;lkdfja dfadfkadfkasdf as dflkajdf alkasdjfa  alksd aladjslkadsf  asdlfkj';
+
   schools$: Observable<School[]>;
   filter = new FormControl('');
   summaryData: Summary[];

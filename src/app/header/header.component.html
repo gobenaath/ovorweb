@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <title>Our Village Our Responsibility</title>
   <script src="https://kit.fontawesome.com/28f3ae9875.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -13,29 +14,20 @@
   <!-- font awesome -->
 
   <title>Our Village Our Responsibility</title>
+  <script></script>
   <style></style>
 </head>
 
-
-<!--
-      https://www.iconfinder.com/icons/185106/armchair_chair_streamline_icon
-      Creative Commons (Attribution 3.0 Unported);
-      https://www.iconfinder.com/webalys
-    -->
-<header class="w-75 mx-auto">
+<!-- <header class="w-75 mx-auto">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <!--
-      https://www.iconfinder.com/icons/185106/armchair_chair_streamline_icon
-      Creative Commons (Attribution 3.0 Unported);
-      https://www.iconfinder.com/webalys
-    -->
+
     <a routerLink="" class="navbar-brand">
       <img src="assets/img/ovor_logo.png" alt="" height="100" width="150" class="rounded-circle" />
     </a>
-    <!-- .nav-togger, nav-link, nav-active are custom from main.css for nav bar text styles-->
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ovorNavBar">
-      <i class="fas fa-bars"> </i>
-      <!-- nav bar icon-->
+      <i class="fa fa-bars"> </i>
+
     </button>
     <div class="collapse navbar-collapse" id="ovorNavBar">
       <ul class="navbar-nav mx-auto">
@@ -60,5 +52,73 @@
       </ul>
     </div>
   </nav>
-  <!-- end of nav-->
+
+</header> -->
+
+<header class="mx-auto">
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <a routerLink="" class="logo">
+      <img src="assets/img/ovor_logo.png" alt="" height="100" width="150" class="rounded-circle" />
+    </a>
+    <ul>
+      <li>
+        <a routerLink="/" [className]="urlString === '/' ? 'active' : ''">Home</a>
+      </li>
+      <li>
+        <a routerLink="/news" [className]="urlString === '/news' ? 'active' : ''">News</a>
+      </li>
+      <li>
+        <a routerLink="/schoolActivities" [className]="getUrl() === '/schoolActivities' ? 'active' : ''">School
+          Activities</a>
+      </li>
+      <li>
+        <a routerLink="/villageActivities" [className]="getUrl() === '/villageActivities' ? 'active' : ''">Village
+          Activities</a>
+      </li>
+      <li>
+        <a routerLink="/smartClasses" [className]="urlString === '/smartClasses' ? 'active' : ''">Smart Classes</a>
+      </li>
+      <li>
+        <a routerLink="/about" [className]="urlString === '/about' ? 'active' : ''">About</a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<!-- <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fa fa-bars"></i>
+    </span>
+    <a href="#" class="logo">logo</a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="#" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Products</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">About Us</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Contact Us</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Blog</a>
+      </li>
+    </ul>
+  </nav> -->
+
+<!--
+
+https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf
+
+https://www.codingnepalweb.com/2020/04/responsive-menu-bar-in-html-css.html
+
+-->
+
+</html>
