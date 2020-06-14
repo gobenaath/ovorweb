@@ -1,0 +1,29 @@
+<div class="card shadow">
+  <img [src]="data.url" class="card-img-top" />
+  <div class="card-body">
+    <div class="card-title">
+      <h5 class="sub-heading">{{ (data.title.length>24)? (data.title | slice:0:24)+'...':(data.title) }}
+      </h5>
+    </div>
+    <div class="card-subtitle">
+      <p class="lead normal-card-font">
+        {{ (data.subTitle.length>30)? (data.subTitle | slice:0:30)+'...':(data.subTitle) }}
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <a class="btn btn-primary" [routerLink]="['/detailActivity','sa',data.id]">
+          More Info
+        </a>
+      </div>
+      <div class="col-6 text-right">
+        <a href="#">
+          <i class="fa fa-facebook fa-2x mx-2 text-primary"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-youtube fa-2x mx-2 text-danger"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

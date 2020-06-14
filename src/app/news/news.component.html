@@ -1,48 +1,29 @@
 <app-header></app-header>
-<section class="w-75 mx-auto  bg-main ">
+<section class="mx-auto  bg-main ">
   <div class="container-fluid">
     <app-page-description [title]=pageTitle [description]=pageDescription></app-page-description>
 
-    <div class="row bg-fifth ml-3 mr-3 mb-5 p-3 rounded shadow">
+    <div class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow" *ngFor="let data of newsData ">
       <div class="col-lg-6">
-        <h2 class="mt-3 mb-3">Two Canal Desiltation</h2>
+        <p class="mt-3  normal-sub-heading-2">{{data.title}}</p>
         <div>
-          <p>aslkdjfa dakjdf adkfjadsja sdlfajdfa dkjad kadlksfjasdkfjadfa
-            dfjkadfkj adkjfaldkjaldkjadk
-            Qpg6aAZGJwF alskjd asdfldsfjalsdkf asdlkfja alsdakjdfa as dfadfslakjdfa dfadlfakjdfa dfdzl
+          <p>
+            {{data.description}}
           </p>
-          <h5 class="text-info">Click for more info...</h5>
+          <a [routerLink]="['/detailActivity','ns',data.id]">
+            <h5 class="text-info">Click for more info...</h5>
+          </a>
         </div>
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
 
         <div class="newImgContainer">
-          <img src="assets/img/news/desiltation.jpg" class="Image" />
+          <a [routerLink]="['/detailActivity','ns',data.id]"><img [src]="data.url" class="Image" /> </a>
         </div>
       </div>
     </div>
 
-    <div class="row bg-fifth m-3 p-3 rounded shadow">
-      <div class="col-lg-6">
-        <h2 class="mt-3 mb-3">Support for COVID-19 affect Families</h2>
-        <div>
-          <p>aslkdjfa dakjdf adkfjadsja sdlfajdfa dkjad kadlksfjasdkfjadfa
-            dfjkadfkj adkjfaldkjaldkjadk
-            Qpg6aAZGJwF alskjd asdfldsfjalsdkf asdlkfja alsdakjdfa as dfadfslakjdfa dfadlfakjdfa dfdzl
-          </p>
-          <h5 class="text-info">Click for more info...</h5>
-        </div>
-      </div>
-      <div class="col-lg-6 d-flex align-items-center justify-content-center">
 
-        <div class=" newImgContainer">
-          <img src="assets/img/news/covid.jpg" class="Image" />
-        </div>
-
-
-
-      </div>
-    </div>
   </div>
 </section>
 <app-footer></app-footer>

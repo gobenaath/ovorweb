@@ -35,6 +35,19 @@ footer {
   max-width: 90%;
 }
 
+.nav-tabs .nav-link {
+  font-size: 1.2rem;
+  font-family: "Ramaraja";
+  background-color: #A8D0E6;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #374785;
+  font-size: 1.2rem;
+  font-family: "Ramaraja";
+  color: white;
+}
+
 .font-dancing-script {
   font-size: 1.5rem;
   font-family: "Playball";
@@ -47,6 +60,15 @@ footer {
 .normal-sub-heading {
   font-size: 1.5rem;
   font-family: "Ramaraja";
+}
+
+.normal-sub-heading-2 {
+  font-size: 2rem;
+  font-family: "Ramaraja";
+}
+
+.normal-card-font {
+  font-size: 1rem;
 }
 
 .shadow-box {

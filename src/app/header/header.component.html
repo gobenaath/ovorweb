@@ -69,7 +69,7 @@
         <a routerLink="/" [className]="urlString === '/' ? 'active' : ''">Home</a>
       </li>
       <li>
-        <a routerLink="/news" [className]="urlString === '/news' ? 'active' : ''">News</a>
+        <a routerLink="/news" [className]="getUrl() === '/news' ? 'active' : ''">News</a>
       </li>
       <li>
         <a routerLink="/schoolActivities" [className]="getUrl() === '/schoolActivities' ? 'active' : ''">School

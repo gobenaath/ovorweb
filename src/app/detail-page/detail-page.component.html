@@ -3,7 +3,8 @@
 <section class="mx-auto">
   <div class="container-fluid bg-main">
     <div class="row pt-3 pb-3">
-      <div class="d-flex align-items-center col-lg-7 normal-sub-heading justify-content-center">
+      <div class="d-flex align-items-center normal-sub-heading justify-content-center" [ngClass]="{'col': !(detailData.village || detailData.district), 'col-lg-7': (detailData.village ||
+        detailData.district) }">
         <h1 class="m-0 p-0">{{detailData.title}} </h1>
       </div>
       <div class="d-flex justify-content-center col-lg-4 bg-fifth " style="border-radius: 25px;"

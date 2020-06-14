@@ -24,6 +24,7 @@ import { VillageActiviesComponent } from './village-activies/village-activies.co
 import { CompletedComponent } from './school-activities/completed/completed.component';
 import { UpcomingComponent } from './school-activities/upcoming/upcoming.component';
 import { PageDescriptionComponent } from './shared/page-description/page-description.component';
+import { CardDisplayComponent } from './shared/card-display/card-display.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PageDescriptionComponent } from './shared/page-description/page-descrip
     CompletedComponent,
     UpcomingComponent,
     PageDescriptionComponent,
+    CardDisplayComponent,
   ],
   imports: [
     BrowserModule,
