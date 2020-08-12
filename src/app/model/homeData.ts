@@ -2,6 +2,7 @@ class HomeData {
   id: number;
   url: string;
   title: string;
+  type?: string;
   description?: string;
 }
 

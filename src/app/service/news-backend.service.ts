@@ -14,6 +14,81 @@ export class NewsBackendService {
 
 const NewsData = [
   {
+    id: 4,
+    url: 'https://www.youtube.com/embed/SFBeDkASZvY',
+    type: 'video',
+    title: 'DIGITAL BOARD for Viruthunagar Kottaiyur Village Government School',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description:
+      'Viruthunagar Kottaiyur Village Government School receives DIGITAL BOARD with the help of Tamil people residing in AMERICA.  This helps for them to setup SMART CLASS.',
+  },
+  {
+    id: 3,
+    url: 'https://www.youtube.com/embed/3eLgnPDbMlk',
+    type: 'video',
+    title: 'NGO contribution for Village Development',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description: 'How Tamil NGO can contribute for their Village Development.',
+  },
+  {
+    id: 2,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/covid/covid1.jpg',
+    title: 'Support During Covid-19',
+    subTitle: 'OVOR organized support during Covid-19',
+    description:
+      'Our Village Our Responsiblity team rose funds amounting to Rs. 2,66,537 to support 453 families which includes tribal families.  Daily wage earners, Scheduled Tribes, Differently abled people, Healthcare workers etc from Nagapattinam, Thiruvarur, Vanjivakkam, Trichy, Kottaiyur, Virudhunagar district and Konerikuppam, Vizhupuram districts.',
+    subSection: {
+      keyValueData: [
+        {
+          key: 'Fund Raised',
+          value: 'Rs. 2,66,537',
+        },
+        {
+          key: 'Total families supported',
+          value: '453',
+        },
+
+        {
+          key: 'Childred & Staff supported',
+          value: '41',
+        },
+        {
+          key: 'Items Given',
+          value: 'Rice, Groceries, Provisions, Masks',
+        },
+        {
+          key: 'PPE Kit distributed to Hospitals',
+          value: '160 Kit',
+        },
+      ],
+    },
+
+    commonImages: [
+      {
+        title: 'Volunteers and NGO support',
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/covid1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/4.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/5.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/6.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/7.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/8.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/9.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/10.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/11.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/12.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/13.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/covid/14.jpg',
+        ],
+      },
+    ],
+  },
+  {
     id: 1,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_7.jpg',
     title: 'Two Canals Desiltation',
@@ -76,62 +151,6 @@ const NewsData = [
           'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_2.jpg',
           'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_7.jpg',
           'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_8.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    url: 'https://ovor.s3-us-west-2.amazonaws.com/covid/covid1.jpg',
-    title: 'Support During Covid-19',
-    subTitle: 'OVOR organized support during Covid-19',
-    description:
-      'Our Village Our Responsiblity team rose funds amounting to Rs. 2,66,537 to support 453 families which includes tribal families.  Daily wage earners, Scheduled Tribes, Differently abled people, Healthcare workers etc from Nagapattinam, Thiruvarur, Vanjivakkam, Trichy, Kottaiyur, Virudhunagar district and Konerikuppam, Vizhupuram districts.',
-    subSection: {
-      keyValueData: [
-        {
-          key: 'Fund Raised',
-          value: 'Rs. 2,66,537',
-        },
-        {
-          key: 'Total families supported',
-          value: '453',
-        },
-
-        {
-          key: 'Childred & Staff supported',
-          value: '41',
-        },
-        {
-          key: 'Items Given',
-          value: 'Rice, Groceries, Provisions, Masks',
-        },
-        {
-          key: 'PPE Kit distributed to Hospitals',
-          value: '160 Kit',
-        },
-      ],
-    },
-
-    commonImages: [
-      {
-        title: 'Volunteers and NGO support',
-        otherImages: [
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/covid1.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/1.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/2.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/3.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/4.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/5.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/6.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/7.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/8.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/9.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/10.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/11.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/12.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/13.jpg',
-          'https://ovor.s3-us-west-2.amazonaws.com/covid/14.jpg',
         ],
       },
     ],

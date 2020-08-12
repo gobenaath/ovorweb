@@ -31,6 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Always use same name for project and repository
 https://dzone.com/articles/publish-your-angular-github-repository-as-a-github?fromrel=true
 ng build --prod --base-href "https://gobenaath.github.io/ovorweb/"
+ng build --prod --base-href "http://ourvillageourresponsibility.com/"
 npm i angular-cli-ghpages --save-dev
 
 npx ngh --no-silent --dir=dist/ovorang (I have to use ovorang)
