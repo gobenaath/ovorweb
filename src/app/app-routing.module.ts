@@ -1,5 +1,7 @@
+import { SkypeClassesComponent } from './skype-classes/skype-classes.component';
+import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
+
 import { VillageActiviesComponent } from './village-activies/village-activies.component';
-import { SmartClassesComponent } from './smart-classes/smart-classes.component';
 import { SchoolActivitiesComponent } from './school-activities/school-activities.component';
 import { NewsComponent } from './news/news.component';
 import { AboutComponent } from './about/about.component';
@@ -13,8 +15,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'news', component: NewsComponent },
   { path: 'schoolActivities', component: SchoolActivitiesComponent },
-  { path: 'smartClasses', component: SmartClassesComponent },
+  { path: 'skypeClasses', component: SkypeClassesComponent },
   { path: 'villageActivities', component: VillageActiviesComponent },
+  { path: 'upcomingProjects', component: UpcomingProjectsComponent },
   { path: 'detailActivity/:src/:id', component: DetailPageComponent },
 ];
 

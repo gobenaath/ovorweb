@@ -8,6 +8,8 @@ import { DetailData } from 'src/app/model/detailData';
 })
 export class CardDisplayComponent implements OnInit {
   @Input() data: DetailData;
+  @Input() src: string;
+
   constructor() {}
 
   ngOnInit(): void {}

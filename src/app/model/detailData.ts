@@ -11,7 +11,6 @@ class DetailData extends HomeData {
   subSection?: SubSection;
   compareImages?: CompareImage[];
   commonImages?: CompareImage[];
-  completed?: boolean;
   video?: boolean;
 }
 

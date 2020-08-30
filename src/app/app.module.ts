@@ -1,3 +1,8 @@
+import { InfrastructureBackendService } from './service/infrastructure-backend.service';
+import { SmartClassesComponent } from './school-activities/smartclasses/smartclasses.component';
+
+import { InfrastructureComponent } from './school-activities/infrastructure/infrastructure.component';
+import { SkypeClassesComponent } from './skype-classes/skype-classes.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { VillageActivitiesBackendService } from './service/village-activities-backend.service';
 import { HomeBackendService } from './service/home-backend.service';
@@ -14,17 +19,15 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { SchoolActivitiesComponent } from './school-activities/school-activities.component';
-import { SmartClassesComponent } from './smart-classes/smart-classes.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DecimalPipe } from '@angular/common';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { SmartClassesBackendService } from './service/smart-classes-backend.service';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { VillageActiviesComponent } from './village-activies/village-activies.component';
-import { CompletedComponent } from './school-activities/completed/completed.component';
-import { UpcomingComponent } from './school-activities/upcoming/upcoming.component';
 import { PageDescriptionComponent } from './shared/page-description/page-description.component';
 import { CardDisplayComponent } from './shared/card-display/card-display.component';
+import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,15 @@ import { CardDisplayComponent } from './shared/card-display/card-display.compone
     AboutComponent,
     NewsComponent,
     SchoolActivitiesComponent,
-    SmartClassesComponent,
+    InfrastructureComponent,
+    SkypeClassesComponent,
     DetailPageComponent,
     VillageActiviesComponent,
-    CompletedComponent,
-    UpcomingComponent,
+    InfrastructureComponent,
+    SmartClassesComponent,
     PageDescriptionComponent,
     CardDisplayComponent,
+    UpcomingProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +62,7 @@ import { CardDisplayComponent } from './shared/card-display/card-display.compone
     HomeBackendService,
     SmartClassesBackendService,
     VillageActivitiesBackendService,
+    InfrastructureBackendService,
   ],
   bootstrap: [AppComponent],
 })

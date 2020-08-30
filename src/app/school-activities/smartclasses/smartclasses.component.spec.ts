@@ -1,6 +1,5 @@
+import { SmartClassesComponent } from './smartclasses.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SmartClassesComponent } from './smart-classes.component';
 
 describe('SmartClassesComponent', () => {
   let component: SmartClassesComponent;
@@ -8,9 +7,8 @@ describe('SmartClassesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SmartClassesComponent ]
-    })
-    .compileComponents();
+      declarations: [SmartClassesComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

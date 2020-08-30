@@ -66,8 +66,8 @@ a:hover {
   display: none;
 }
 
-
-@media (max-width: 1000px) {
+/* max-width says till what width mobile menu should appear*/
+@media (max-width: 1350px) {
   .checkbtn {
     display: block;
     margin-right: 40px;

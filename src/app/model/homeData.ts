@@ -4,6 +4,7 @@ class HomeData {
   title: string;
   type?: string;
   description?: string;
+  completed?: boolean;
 }
 
 class SmartClassData extends HomeData {}

@@ -1,22 +1,21 @@
-import { HomeBackendService } from './../service/home-backend.service';
-import { SmartClassesBackendService } from './../service/smart-classes-backend.service';
+import { HomeBackendService } from '../service/home-backend.service';
+import { SmartClassesBackendService } from '../service/smart-classes-backend.service';
 import { Component, OnInit, PipeTransform } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
-import { DecimalPipe } from '@angular/common';
 
 import { map, startWith } from 'rxjs/operators';
 import { HomeData } from '../model/homeData';
 
 @Component({
-  selector: 'app-smart-classes',
-  templateUrl: './smart-classes.component.html',
-  styleUrls: ['./smart-classes.component.scss'],
+  selector: 'app-skype-classes',
+  templateUrl: './skype-classes.component.html',
+  styleUrls: ['./skype-classes.component.scss'],
 })
-export class SmartClassesComponent implements OnInit {
-  pageTitle: string = 'Smart Class';
+export class SkypeClassesComponent implements OnInit {
+  pageTitle: string = 'Skype Class';
   pageDescription: string =
-    'This is smart class.  alsdfkfka fda;lkdfja dfadfkadfkasdf as dflkajdf alkasdjfa  alksd aladjslkadsf  asdlfkj';
+    'This is skype class.  alsdfkfka fda;lkdfja dfadfkadfkasdf as dflkajdf alkasdjfa  alksd aladjslkadsf  asdlfkj';
 
   schools$: Observable<School[]>;
   filter = new FormControl('');
@@ -56,14 +55,6 @@ export class SmartClassesComponent implements OnInit {
   ngOnInit(): void {}
 }
 
-/* const imageObject: Array<object> = [
-  {
-    image: 'assets/img/smartclasses/1.jpg',
-    thumbImage: 'assets/img/smartclasses/1_t.jpg',
-    alt: 'alt of image',
-    title: 'title of image',
-  };
-] */
 //https://www.npmjs.com/package/ng-image-slider
 interface School {
   name: string;

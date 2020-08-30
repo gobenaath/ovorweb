@@ -18,7 +18,9 @@ export class NewsComponent implements OnInit {
   constructor(
     private newsBackendService: NewsBackendService,
     public sanitizer: DomSanitizer
-  ) {}
+  ) {
+    console.log(window.innerWidth);
+  }
 
   ngOnInit(): void {
     this.newsBackendService.getNews().subscribe({

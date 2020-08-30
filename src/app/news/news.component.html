@@ -1,46 +1,89 @@
 <app-header></app-header>
 <section class="mx-auto bg-main">
   <div class="container-fluid">
-    <app-page-description
-      [title]="pageTitle"
-      [description]="pageDescription"
-    ></app-page-description>
+    <app-page-description [title]="pageTitle" [description]="pageDescription"></app-page-description>
 
-    <div
-      class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow"
-      *ngFor="let data of newsData"
-    >
+    <div class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow" *ngFor="let data of newsData">
       <div class="col-lg-6">
         <p class="mt-3 normal-sub-heading-2">{{ data.title }}</p>
         <div>
           <p>
             {{ data.description }}
           </p>
-          <a
-            *ngIf="data.type !== 'video'"
-            [routerLink]="['/detailActivity', 'ns', data.id]"
-          >
+          <a *ngIf="data.type !== 'video'" [routerLink]="['/detailActivity', 'ns', data.id]">
             <h5 class="text-info">Click for more info...</h5>
           </a>
         </div>
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <div class="newImgContainer">
-          <a
-            *ngIf="data.type !== 'video'"
-            [routerLink]="['/detailActivity', 'ns', data.id]"
-            ><img [src]="data.url" class="Image" />
+          <a *ngIf="data.type !== 'video'" [routerLink]="['/detailActivity', 'ns', data.id]"><img [src]="data.url"
+              class="Image" />
           </a>
-          <iframe
-            *ngIf="data.type === 'video'"
-            width="300"
-            height="270"
-            [src]="sanitizeUrl(data.url)"
-          >
+          <iframe *ngIf="data.type === 'video'" width="300" height="270" [src]="sanitizeUrl(data.url)">
           </iframe>
         </div>
       </div>
     </div>
+
+
+    <!-- <div class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow" *ngFor="let data of newsData; let i = index">
+      <div class="col-6">
+        <div class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow">
+          <div class="col-lg-6">
+            <p class="mt-3 normal-sub-heading-2">{{ data.title }}</p>
+            <div>
+              <p>
+                {{ data.description }}
+              </p>
+              <a *ngIf="data.type !== 'video'" [routerLink]="['/detailActivity', 'ns', data.id]">
+                <h5 class="text-info">Click for more info...</h5>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="newImgContainer">
+              <a *ngIf="data.type !== 'video'" [routerLink]="['/detailActivity', 'ns', data.id]"><img [src]="data.url"
+                  class="Image" />
+              </a>
+              <iframe *ngIf="data.type === 'video'" width="300" height="270" [src]="sanitizeUrl(data.url)">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="row bg-fifth ml-3 mr-3 mb-3 p-3 rounded shadow">
+          <div class="col-lg-6">
+            <p class="mt-3 normal-sub-heading-2">{{ newsData[i+1].title }}</p>
+            <div>
+              <p>
+                {{ newsData[i+1].description }}
+              </p>
+              <a *ngIf="newsData[i+1].type !== 'video'" [routerLink]="['/detailActivity', 'ns', newsData[i+1].id]">
+                <h5 class="text-info">Click for more info...</h5>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="newImgContainer">
+              <a *ngIf="newsData[i+1].type !== 'video'" [routerLink]="['/detailActivity', 'ns', newsData[i+1].id]"><img
+                  [src]="newsData[i+1].url" class="Image" />
+              </a>
+              <iframe *ngIf="newsData[i+1].type === 'video'" width="300" height="270"
+                [src]="sanitizeUrl(newsData[i+1].url)">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+
+
+
+
   </div>
 </section>
 <app-footer></app-footer>
