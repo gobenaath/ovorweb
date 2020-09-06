@@ -1,8 +1,8 @@
-<div class="row mb-3">
+<div class="row p-5">
   <div class="col text-center ">
-    <h2 class="mt-3 sub-heading">{{title}}</h2>
-    <p class="lead font-dancing-script">
-      {{description}}
+    <p class="lead font-dancing-script" [innerHTML]='getDescription()'>
     </p>
+    <app-simple-modal *ngIf="description.length > 30" [title]="title" [description]="description" class="pull-right">
+    </app-simple-modal>
   </div>
 </div>

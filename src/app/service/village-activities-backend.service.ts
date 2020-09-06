@@ -14,8 +14,57 @@ export class VillageActivitiesBackendService {
 
 const VillageActivitiesData = [
   {
+    id: 4,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va3_2.jpg',
+    title: 'Grama Sabha Gathering',
+    subTitle:
+      'Residents and Youths from 6 Village participated in Grama Sabha gathering.',
+    district: 'Virudhunagar',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va3_1.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va3_1.jpg',
+    title: 'TASMAC Shop Closure',
+    subTitle: 'Villagers organized and took necessary step to close TASMAC',
+    description: '',
+    district: 'Virudhunagar',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va3_1.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va2_1.jpg',
+    title: 'Lake Desilted',
+    subTitle: 'Lake Desilted in Kottaiyur, Virudhunagar',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    compareImages: [
+      {
+        title: 'Lake Desilted',
+        beforeImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va2_1.jpg',
+        ],
+        afterImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va2_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
     id: 1,
-    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_7.jpg',
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va1_6.jpg',
     title: 'Two Canals Desiltation',
     subTitle: 'OVOR organized to desilt 2 canals',
     village: 'Kottaiyur',

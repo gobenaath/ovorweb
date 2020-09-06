@@ -28,6 +28,8 @@ import { VillageActiviesComponent } from './village-activies/village-activies.co
 import { PageDescriptionComponent } from './shared/page-description/page-description.component';
 import { CardDisplayComponent } from './shared/card-display/card-display.component';
 import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
+import { SimpleModalComponent } from './shared/simple-modal/simple-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects
     PageDescriptionComponent,
     CardDisplayComponent,
     UpcomingProjectsComponent,
+    SimpleModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects
     FormsModule,
     NgImageSliderModule,
     TabsModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [
     DecimalPipe,

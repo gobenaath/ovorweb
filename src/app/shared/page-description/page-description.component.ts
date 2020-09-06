@@ -11,4 +11,10 @@ export class PageDescriptionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  getDescription(): string {
+    return this.description.length > 200
+      ? this.description.slice(0, 200) + '...'
+      : this.description;
+  }
 }

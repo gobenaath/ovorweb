@@ -45,7 +45,8 @@
         </div>
       </div>
 
-      <div class="card-body text-center m-3 bg-fourth" style="border-radius: 10px;" *ngIf="detailData.subSection">
+      <div class="card-body text-center m-3 bg-fourth col-lg-6 mx-auto" style="border-radius: 10px;"
+        *ngIf="detailData.subSection">
         <h4 class="card-title normal-sub-heading">{{detailData.subSection.heading}}</h4>
         <p class="card-text" *ngFor="let keyData of detailData.subSection.keyValueData">
           <span> <b>{{keyData.key}} : </b></span> {{keyData.value}}
@@ -80,7 +81,7 @@
                 <div class="card-body">
                   <div class="">
 
-                    <div *ngFor="let imageUrl of compareImage.beforeImages">
+                    <div *ngFor="let imageUrl of compareImage.afterImages">
                       <img [src]="imageUrl" class="img-in-div" />
                     </div>
                   </div>

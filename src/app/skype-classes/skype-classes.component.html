@@ -24,10 +24,9 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">School Name</th>
-                <th scope="col">Subject</th>
-                <th scope="col">Students</th>
-                <th scope="col">Tutors</th>
+                <th scope="col">Name of School</th>
+                <th scope="col">Village</th>
+                <th scope="col">District</th>
               </tr>
             </thead>
             <tbody>
@@ -37,14 +36,12 @@
                   <ngb-highlight [result]="school.name" [term]="filter.value"></ngb-highlight>
                 </td>
                 <td>
-                  <ngb-highlight [result]="school.subject" [term]="filter.value"></ngb-highlight>
+                  <ngb-highlight [result]="school.village" [term]="filter.value"></ngb-highlight>
                 </td>
                 <td>
-                  <ngb-highlight [result]="school.noOfStudents" [term]="filter.value"></ngb-highlight>
+                  <ngb-highlight [result]="school.district" [term]="filter.value"></ngb-highlight>
                 </td>
-                <td>
-                  <ngb-highlight [result]="school.noOfTutors" [term]="filter.value"></ngb-highlight>
-                </td>
+
               </tr>
             </tbody>
           </table>
@@ -55,8 +52,8 @@
 
 
     <!--   total -->
-    <div class="row bg-light p-3">
-      <div class="col-lg-6 border border-dark">
+    <div class="row bg-light p-3 align-items-center">
+      <div class="col-lg-6 border border-dark mx-auto">
         <table class="table table-striped">
           <thead>
             <tr class="text-center">
@@ -70,24 +67,6 @@
                 {{ summary.name }}
               </td>
               <td>{{ summary.count }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-lg-6 border border-dark">
-        <table class="table table-striped">
-          <thead>
-            <tr class="text-center">
-              <th scope="col" colspan="3">Summary Two</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let summary of summaryDataTwo">
-              <td>
-                {{ summary.name }}
-              </td>
-              <td>{{ summary.count }}</td>
-              <td>{{ summary.percent }}</td>
             </tr>
           </tbody>
         </table>

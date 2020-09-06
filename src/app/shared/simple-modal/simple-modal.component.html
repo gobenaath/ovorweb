@@ -1,0 +1,15 @@
+<button type="button" class="btn btn-primary " (click)="openModal(template)"
+  style="font-family: Georgia, 'Times New Roman', Times, serif;">More Info...</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left"> {{ title }}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+      <i class="fa fa-window-close"></i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p [innerHTML]='description'> </p>
+
+  </div>
+</ng-template>

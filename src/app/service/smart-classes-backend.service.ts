@@ -16,6 +16,111 @@ export class SmartClassesBackendService {
 
 const SmartClassPageData = [
   {
+    id: 7,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm12_1.jpg',
+    title: 'Panchayat Union Middle School',
+    subTitle: 'Smart Class Setup',
+    village: 'Alliyalamangalam',
+    district: 'Thiruvannamalai',
+    completed: true,
+    description:
+      'Smart Class Room installed in Panchayat Union Middle School, Alliyalamangalam, Thiruvannamalai District.',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm12_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm12_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm10_1.jpg',
+    title: 'Government School',
+    subTitle: 'Smart Class Setup',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    completed: true,
+    description:
+      'Smart Class Room installed in Government School, Konnerikuppam, Villupuram District.',
+
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm10_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm10_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm9_1.jpg',
+    title: 'Govt Adi Dravidar Middle School',
+    subTitle: 'Smart Class Setup',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    completed: true,
+    description:
+      'Smart Class Room installed in Govt Adi Dravidar Middle School with the help of Tamilnadu Govt and Kottaiyur Villagers.',
+    subSection: {
+      heading: 'Sponsors',
+      keyValueData: [
+        {
+          key: 'Government of Tamilnadu',
+          value: '2/3rd of Fund',
+        },
+        {
+          key: 'Kottaiyur Villagers',
+          value: '1/3rd of Fund',
+        },
+      ],
+    },
+
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm9_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm9_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm8_1.JPG',
+    title: 'Government Higer Secondary School',
+    subTitle: 'Smart Class Setup',
+    village: 'Maharajapuram',
+    district: 'Virudhunagar',
+    completed: true,
+    description:
+      'Smart Class Room installed in Govt Higher Secondary School with the help of Tamilnadu Govt and School Alumini.',
+    subSection: {
+      heading: 'Sponsors',
+      keyValueData: [
+        {
+          key: 'Government of Tamilnadu',
+          value: '2/3rd of Fund',
+        },
+        {
+          key: 'School Alumini',
+          value: '1/3rd of Fund',
+        },
+      ],
+    },
+
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm8_1.JPG',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm8_2.JPG',
+        ],
+      },
+    ],
+  },
+  {
     id: 3,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa4_1.jpg',
     title: 'Government Middle School',
@@ -73,6 +178,7 @@ const SmartClassPageData = [
         otherImages: [
           'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa3_1.jpg',
           'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/sa3_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm11_1.jpg',
         ],
       },
     ],

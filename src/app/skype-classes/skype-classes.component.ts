@@ -15,7 +15,29 @@ import { HomeData } from '../model/homeData';
 export class SkypeClassesComponent implements OnInit {
   pageTitle: string = 'Skype Class';
   pageDescription: string =
-    'This is skype class.  alsdfkfka fda;lkdfja dfadfkadfkasdf as dflkajdf alkasdjfa  alksd aladjslkadsf  asdlfkj';
+    'Government schools in Tamil Nadu, India are the most Economical and feasible mode to seek Education for kids from economically disadvantaged background.However, due to' +
+    'infrastructure and lack of better learning opportunity for English & Computer Science there is high drop outs from Government schools.The parents bear the burden of Loan ' +
+    'from private lenders to ensure quality education to their Children for their bright future.This puts debt burden on parents and Government schools are often shut down due to' +
+    'very low strength of students hence this leads to deprivation of Social justice to the Children of the parents who are daily wage earners.Most of the students who seek' +
+    'education in Government Schools are the Children of Daily wage earner & Farming community. <br/>' +
+    '<br/>' +
+    'The “School in Cloud” program tries to eradicate this concern by taking English and Computer classes through Skype to the students in government schools.Which will enable' +
+    'the Children who cannot afford Private schools to continue their education in Government schools and also allow parents to seek education from government schools thus' +
+    'safeguarding themselves from the burden of debt.<br/>' +
+    '<br/>' +
+    'Online Classes are easy way to reach out & contribute to the society by the Volunteers across globe with a commitment of One hour a Week.Our initiative leverages' +
+    'technology to connect volunteers from various parts of world with the students which acts as a motivational factor & an exciting mode of learning for them.The initiative also' +
+    'has enabled many Government school teachers to have an opportunity to learn usage of technology and Computers. <br/>' +
+    '<br/>' +
+    'We conduct classes in 22 Government schools in remote villages of Tamil Nadu, India across 9 Districts covering over 3830 Students every week with over 3475 person hours of' +
+    'effort put by Volunteers who teach English, Math & Computer subjects by 117 Teaching & 22 Non Teaching volunteers per month.This sustained initiative not only brings' +
+    'education to kids at no expense to their parents, but also establishes a highly repeatable model that can be deployed at scale.<br/>' +
+    '<br/>' +
+    'Since the permission from the District education officer was available, the headmasters were very cooperative in enabling the sessions.We can very clearly see the' +
+    'development of Students Confidence in interacting with new people, learning the language & improvement in Communication along with thought process.This initiative not' +
+    'only brings education to Children in a very attractive way, this also comes at no expense to the parents and is a simple model that can be deployed at large scale.<br/>' +
+    '<br/>' +
+    'Hence the need for these sessions were determined as important & beneficial.';
 
   schools$: Observable<School[]>;
   filter = new FormControl('');
@@ -32,7 +54,6 @@ export class SkypeClassesComponent implements OnInit {
       map((text) => search(text))
     );
     this.summaryData = SummaryData;
-    this.summaryDataTwo = SummaryDataTwo;
     homeBackendService.getHomePageData().subscribe({
       next: (x) => {
         //this.imageObject = x;
@@ -58,59 +79,110 @@ export class SkypeClassesComponent implements OnInit {
 //https://www.npmjs.com/package/ng-image-slider
 interface School {
   name: string;
-  subject: string;
-  noOfTutors: number;
-  noOfStudents: number;
+  village: string;
+  district: string;
 }
 
 const SCHOOLS: School[] = [
   {
-    name: 'GHS Poovananthapuram',
-    subject: 'English',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'Annamalai Nadar Unnamalai Ammal higher secondary School',
+    village: 'Sivakasi',
+    district: 'Virudhunagar',
   },
   {
-    name: 'GHS Poovananthapuram',
-    subject: 'Computer',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'PUPS',
+    village: 'Ayan Karisalkulam',
+    district: 'Virudhunagar',
   },
   {
-    name: 'GHS Palavantham',
-    subject: 'English',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'G.Kallar.HSS E.Pudupatti',
+    village: 'Pudupatti',
+    district: 'Theni',
   },
   {
-    name: 'GHS Palavantham',
-    subject: 'Computer',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'GHS Thulukapatty',
+    village: 'Thulukampatti',
+    district: 'Virudhunagar',
   },
   {
-    name: 'GHS Viswanatham',
-    subject: 'English',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'GHS, Thambipatti ',
+    village: 'Thambipatti',
+    district: 'Virudhunagar',
   },
   {
-    name: 'GHS Viswanatham',
-    subject: 'Computer',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'Govt Adi dravidar Middle School, Kottaiyur ',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
   },
   {
-    name: 'GHS Amathur',
-    subject: 'English',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'GHS Allinagaram ',
+    village: 'Allinagaram',
+    district: 'Theni',
   },
   {
-    name: 'GHS Amathur',
-    subject: 'Computer',
-    noOfStudents: 75,
-    noOfTutors: 5,
+    name: 'PUMS - Konnerikuppam',
+    village: 'Konnerikuppam',
+    district: 'Vizhupuram',
+  },
+  {
+    name: 'Govt PUMS, Edayathankudi',
+    village: 'Edayanthankudi',
+    district: 'Ariyalur',
+  },
+  {
+    name: 'MHSS, Arupukottai',
+    village: 'Arupukottai',
+    district: 'Virudhunagar',
+  },
+  {
+    name: 'National Primary School, Ayyampalayam',
+    village: 'Ayyampalayam',
+    district: 'Dindugal',
+  },
+  {
+    name: 'PUMS Jothinagar, Uthangarai ',
+    village: 'Uthangarai',
+    district: 'Krishnagiri',
+  },
+  {
+    name: 'RG School, Elandaikulam ',
+    village: 'Elandaikulam',
+    district: 'Virudhunagar',
+  },
+  {
+    name: 'VKG Karunai illam',
+    village: 'Uppukottai',
+    district: 'Theni',
+  },
+  {
+    name: 'VKG Residency home',
+    village: 'Uppukottai',
+    district: 'Theni',
+  },
+  {
+    name: 'PUMS',
+    village: 'Yembal',
+    district: 'Pudukottai',
+  },
+  {
+    name: 'Maharajapuram Primary school',
+    village: 'Maharajapuram',
+    district: 'Virudhunagar',
+  },
+  {
+    name: 'Govt. Adi Dravidar Welfare Middle school',
+    village: 'Agasampatti',
+    district: 'Virudhunagar',
+  },
+  {
+    name: 'GHSS Puduppalayam',
+    village: 'Rasipuram',
+    district: 'Namakkal',
+  },
+  {
+    name: 'PUMS Kandhampalayam',
+    village: 'Kandhampalayam',
+    district: 'Erode',
   },
 ];
 
@@ -122,62 +194,32 @@ interface Summary {
 
 const SummaryData: Summary[] = [
   {
-    name: 'Total Volunteers',
-    count: '28',
+    name: 'Total Teaching Volunteers',
+    count: '103',
+  },
+  {
+    name: 'Total Non Teaching Co ordinating Volunteers',
+    count: '16',
   },
   {
     name: 'Number of Schools',
-    count: '7',
+    count: '20',
   },
   {
-    name: 'Number of Students: English',
-    count: '255',
+    name: 'Number of Districts',
+    count: '9',
   },
   {
-    name: 'Number of Students: CS',
-    count: '84',
+    name: 'Total Volunteers',
+    count: '119',
   },
   {
-    name: 'Number of Students: GK',
-    count: '39',
-  },
-];
-
-const SummaryDataTwo: Summary[] = [
-  {
-    name: 'Total schools being reached out',
-    count: '175',
-    percent: '',
+    name: 'Total Students covered per Week',
+    count: '4066',
   },
   {
-    name: 'Classes started',
-    count: '6',
-    percent: '3',
-  },
-  {
-    name: 'Skype test WIP',
-    count: '10',
-    percent: '6',
-  },
-  {
-    name: 'Discussion WIP',
-    count: '39',
-    percent: '22',
-  },
-  {
-    name: 'Infra / connectivity issue',
-    count: '86',
-    percent: '49',
-  },
-  {
-    name: 'Not reachable or not interested',
-    count: '22',
-    percent: '13',
-  },
-  {
-    name: 'Yet to call',
-    count: '12',
-    percent: '7',
+    name: 'Total hours of effort per Month by Tutors',
+    count: '595',
   },
 ];
 
@@ -186,7 +228,8 @@ function search(text: string): School[] {
     const term = text.toLowerCase();
     return (
       school.name.toLowerCase().includes(term) ||
-      school.subject.toLowerCase().includes(term)
+      school.village.toLowerCase().includes(term) ||
+      school.district.toLowerCase().includes(term)
     );
   });
 }
