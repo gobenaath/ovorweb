@@ -2,7 +2,8 @@
 <section class="mx-auto bg-main">
 
   <div class="container-fluid">
-    <app-page-description [title]=pageTitle [description]=pageDescription></app-page-description>
+    <app-page-description [pageDescription]="pageDescription">
+    </app-page-description>
     <div class="row bg-second">
       <div class="col-lg-4 col-sm-10 mx-auto m-4" *ngFor="let data of villageActivitiesData">
         <app-card-display [data]="data" src="va"></app-card-display>

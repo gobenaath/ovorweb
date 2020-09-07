@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PageDescription } from 'src/app/model/pageDescription';
 
 @Component({
   selector: 'app-page-description',
@@ -6,15 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./page-description.component.scss'],
 })
 export class PageDescriptionComponent implements OnInit {
-  @Input() title: string;
-  @Input() description: string;
+  @Input() pageDescription: PageDescription;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   getDescription(): string {
-    return this.description.length > 200
-      ? this.description.slice(0, 200) + '...'
-      : this.description;
+    return this.pageDescription.description.length > 200
+      ? this.pageDescription.description.slice(0, 200) + '...'
+      : this.pageDescription.description;
   }
 }

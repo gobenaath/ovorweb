@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PageDescription } from '../model/pageDescription';
+import { SmartClassesBackendService } from '../service/smart-classes-backend.service';
 
 @Component({
   selector: 'app-school-activities',
@@ -6,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./school-activities.component.scss'],
 })
 export class SchoolActivitiesComponent implements OnInit {
-  pageTitle: string = 'School Activities';
-  pageDescription: string =
-    'This is school activities.  asdasaa  dfadfk jsdflk lkasjdf ldksfja asdlfadkjasldf asdlf aslkdfajdf zadfklsdf dflk';
+  pageDescription: PageDescription;
 
-  constructor() {}
+  constructor(private smartClassesBackendService: SmartClassesBackendService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.smartClassesBackendService.getPageDescription().subscribe({
+      next: (x) => {
+        this.pageDescription = x;
+      },
+      error: (err) =>
+        console.error('Error while retreiving page description: ' + err),
+    });
+  }
 }

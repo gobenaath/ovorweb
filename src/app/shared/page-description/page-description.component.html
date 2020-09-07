@@ -1,8 +1,9 @@
-<div class="row p-5">
+<div class="row p-2">
   <div class="col text-center ">
     <p class="lead font-dancing-script" [innerHTML]='getDescription()'>
     </p>
-    <app-simple-modal *ngIf="description.length > 30" [title]="title" [description]="description" class="pull-right">
+    <app-simple-modal *ngIf="pageDescription.description.length > 30 || pageDescription.items"
+      [pageDescription]="pageDescription" class="pull-right">
     </app-simple-modal>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageDescription } from '../model/pageDescription';
 
 @Component({
   selector: 'app-upcoming-projects',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingProjectsComponent implements OnInit {
   pageTitle: string = 'Upcoming Projects';
-  pageDescription: string = 'Page coming soon...';
+  pageDescription: PageDescription;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.pageDescription = this.getPageDescription();
+  }
+
+  getPageDescription(): PageDescription {
+    let pageDescription: PageDescription = new PageDescription();
+    pageDescription.title = 'Upcoming Projects';
+    pageDescription.description = 'Working on page construction...';
+    return pageDescription;
+  }
 }

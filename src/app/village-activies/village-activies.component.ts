@@ -1,6 +1,8 @@
 import { VillageActivitiesBackendService } from './../service/village-activities-backend.service';
 import { Component, OnInit } from '@angular/core';
 import { DetailData } from '../model/detailData';
+import { NewsBackendService } from '../service/news-backend.service';
+import { PageDescription } from '../model/pageDescription';
 
 @Component({
   selector: 'app-village-activies',
@@ -8,14 +10,13 @@ import { DetailData } from '../model/detailData';
   styleUrls: ['./village-activies.component.scss'],
 })
 export class VillageActiviesComponent implements OnInit {
-  pageTitle: string = 'Village Activities';
-  pageDescription: string =
-    'This is village activities.  asdasaa  dfadfk jsdflk lkasjdf ldksfja asdlfadkjasldf asdlf aslkdfajdf zadfklsdf dflk';
+  pageDescription: PageDescription;
 
   villageActivitiesData: DetailData[];
 
   constructor(
-    private villageActivitiesBackendService: VillageActivitiesBackendService
+    private villageActivitiesBackendService: VillageActivitiesBackendService,
+    private newsBackendService: NewsBackendService
   ) {}
 
   ngOnInit(): void {
@@ -27,6 +28,14 @@ export class VillageActiviesComponent implements OnInit {
       },
       error: (err) =>
         console.error('Error while retreiving detail data: ' + err),
+    });
+    this.newsBackendService.getPageDescription().subscribe({
+      next: (x) => {
+        this.pageDescription = x;
+        this.pageDescription.title = 'Village Activities';
+      },
+      error: (err) =>
+        console.error('Error while retreiving page description: ' + err),
     });
   }
 }

@@ -1,7 +1,8 @@
 <app-header></app-header>
 <section class="mx-auto bg-main" style="max-width: 90%;">
   <div class="container-fluid">
-    <app-page-description [title]=pageTitle [description]=pageDescription></app-page-description>
+    <app-page-description [pageDescription]="pageDescription">
+    </app-page-description>
 
     <tabset>
       <tab heading="Infrastructure" id="tab1">

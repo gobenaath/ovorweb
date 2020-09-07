@@ -2,6 +2,7 @@ import { NewsBackendService } from './../service/news-backend.service';
 import { Component, OnInit } from '@angular/core';
 import { DetailData } from '../model/detailData';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PageDescription } from '../model/pageDescription';
 
 @Component({
   selector: 'app-news',
@@ -9,18 +10,14 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent implements OnInit {
-  pageTitle: string = 'News';
-  pageDescription: string =
-    'This is new page.  alsdfkfka fda;lkdfja dfadfkadfkasdf as dflkajdf alkasdjfa  alksd aladjslkadsf  asdlfkj';
+  pageDescription: PageDescription;
 
   newsData: DetailData[];
 
   constructor(
     private newsBackendService: NewsBackendService,
     public sanitizer: DomSanitizer
-  ) {
-    console.log(window.innerWidth);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.newsBackendService.getNews().subscribe({
@@ -31,6 +28,15 @@ export class NewsComponent implements OnInit {
       },
       error: (err) =>
         console.error('Error while retreiving detail data: ' + err),
+    });
+    this.newsBackendService.getPageDescription().subscribe({
+      next: (x) => {
+        //this.imageObject = x;
+
+        this.pageDescription = x;
+      },
+      error: (err) =>
+        console.error('Error while retreiving page description: ' + err),
     });
   }
 

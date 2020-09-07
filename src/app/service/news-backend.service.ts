@@ -1,6 +1,7 @@
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { DetailData } from '../model/detailData';
+import { PageDescription } from '../model/pageDescription';
 @Injectable({
   providedIn: 'root',
 })
@@ -10,8 +11,57 @@ export class NewsBackendService {
   getNews(): Observable<DetailData[]> {
     return of(NewsData);
   }
+
+  getPageDescription(): Observable<PageDescription> {
+    return of(PageDescriptionData);
+  }
 }
 
+const PageDescriptionData = {
+  title: 'News',
+  description:
+    'Kottaiyur village from Virudhunagar District has been adopted & following works has been accomplished',
+  items: [
+    {
+      title:
+        'Water Bodies restoration in Kottaiyur village, Virudhunagar District',
+      values: [
+        'Two Canals 5 km & 6 km each and Two Lake desilted & handed over to Grama Panchayat for maintenance',
+        'Two Lakes desilted',
+      ],
+    },
+    {
+      title: 'Tree Plantation',
+      values: [
+        '400 Tree Saplings planted in Government Schools by announcing competition among students to maintain it well.  Prizes distributed to students who took care of their saplings best.',
+        '50 Palm tree planted around lake and government schools',
+      ],
+    },
+    {
+      title:
+        'Street Lights repaired & new lights installed in front of Panchayat Union Primary school, Kottaiyur, Virudhunagar District.',
+    },
+    {
+      title: 'TASMAC shop closed',
+      values: [
+        'TASMAC shop closed & relocated through grievances raised & multiple follow up through Prime minister’s grievance website.Multiple grievances raised through PM / CM Cell & RTI’s filed to resolve issues in village administration',
+      ],
+    },
+    {
+      title: 'Grama Sabha Meetings',
+      values: [
+        'Youngsters from 6 villages are educated , Informed & Motivated to participate in Grama Sabha meetings and Village administration and raise questions.',
+      ],
+    },
+    {
+      title: 'Got public toilet through CM CELL',
+    },
+    {
+      title:
+        'Got the local government to lay road for 4 kms for villagers ease through CM CELL',
+    },
+  ],
+};
 const NewsData = [
   {
     id: 5,

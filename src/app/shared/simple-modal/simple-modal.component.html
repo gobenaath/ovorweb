@@ -3,13 +3,25 @@
 
 <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left"> {{ title }}</h4>
+    <h4 class="modal-title pull-left"> {{ pageDescription.title }}</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
       <i class="fa fa-window-close"></i>
     </button>
   </div>
   <div class="modal-body">
-    <p [innerHTML]='description'> </p>
+    <p [innerHTML]='pageDescription.description' *ngIf="pageDescription.description"> </p>
+    <div *ngIf="pageDescription">
+      <ul *ngFor="let item of pageDescription.items">
+        <li>
+          {{item.title}}
+          <ul *ngIf="item.values">
+            <li *ngFor="let itemValue of item.values">
+              {{itemValue}}
+            </li>
+          </ul>
 
+        </li>
+      </ul>
+    </div>
   </div>
 </ng-template>

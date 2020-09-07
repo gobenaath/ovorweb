@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { PageDescription } from 'src/app/model/pageDescription';
 
 @Component({
   selector: 'app-simple-modal',
@@ -10,8 +11,7 @@ export class SimpleModalComponent implements OnInit {
   modalRef: BsModalRef;
   constructor(private modalService: BsModalService) {}
 
-  @Input() title: string;
-  @Input() description: string;
+  @Input() pageDescription: PageDescription;
 
   ngOnInit(): void {}
 

@@ -6,6 +6,7 @@ import { FormControl } from '@angular/forms';
 
 import { map, startWith } from 'rxjs/operators';
 import { HomeData } from '../model/homeData';
+import { PageDescription } from '../model/pageDescription';
 
 @Component({
   selector: 'app-skype-classes',
@@ -14,30 +15,9 @@ import { HomeData } from '../model/homeData';
 })
 export class SkypeClassesComponent implements OnInit {
   pageTitle: string = 'Skype Class';
-  pageDescription: string =
-    'Government schools in Tamil Nadu, India are the most Economical and feasible mode to seek Education for kids from economically disadvantaged background.However, due to' +
-    'infrastructure and lack of better learning opportunity for English & Computer Science there is high drop outs from Government schools.The parents bear the burden of Loan ' +
-    'from private lenders to ensure quality education to their Children for their bright future.This puts debt burden on parents and Government schools are often shut down due to' +
-    'very low strength of students hence this leads to deprivation of Social justice to the Children of the parents who are daily wage earners.Most of the students who seek' +
-    'education in Government Schools are the Children of Daily wage earner & Farming community. <br/>' +
-    '<br/>' +
-    'The “School in Cloud” program tries to eradicate this concern by taking English and Computer classes through Skype to the students in government schools.Which will enable' +
-    'the Children who cannot afford Private schools to continue their education in Government schools and also allow parents to seek education from government schools thus' +
-    'safeguarding themselves from the burden of debt.<br/>' +
-    '<br/>' +
-    'Online Classes are easy way to reach out & contribute to the society by the Volunteers across globe with a commitment of One hour a Week.Our initiative leverages' +
-    'technology to connect volunteers from various parts of world with the students which acts as a motivational factor & an exciting mode of learning for them.The initiative also' +
-    'has enabled many Government school teachers to have an opportunity to learn usage of technology and Computers. <br/>' +
-    '<br/>' +
-    'We conduct classes in 22 Government schools in remote villages of Tamil Nadu, India across 9 Districts covering over 3830 Students every week with over 3475 person hours of' +
-    'effort put by Volunteers who teach English, Math & Computer subjects by 117 Teaching & 22 Non Teaching volunteers per month.This sustained initiative not only brings' +
-    'education to kids at no expense to their parents, but also establishes a highly repeatable model that can be deployed at scale.<br/>' +
-    '<br/>' +
-    'Since the permission from the District education officer was available, the headmasters were very cooperative in enabling the sessions.We can very clearly see the' +
-    'development of Students Confidence in interacting with new people, learning the language & improvement in Communication along with thought process.This initiative not' +
-    'only brings education to Children in a very attractive way, this also comes at no expense to the parents and is a simple model that can be deployed at large scale.<br/>' +
-    '<br/>' +
-    'Hence the need for these sessions were determined as important & beneficial.';
+  description: string =
+    'assdf asdf asd asdf adf adf asd adfadfa fdadsasd adsfasdfas dfasdfa dfasdf  sadfasdfadfasf sd';
+  pageDescription: PageDescription;
 
   schools$: Observable<School[]>;
   filter = new FormControl('');
@@ -73,7 +53,40 @@ export class SkypeClassesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.pageDescription = this.getPageDescription();
+  }
+
+  getPageDescription(): PageDescription {
+    let pageDescription: PageDescription = new PageDescription();
+
+    pageDescription.title = 'Skype Class';
+    pageDescription.description =
+      'Government schools in Tamil Nadu, India are the most Economical and feasible mode to seek Education for kids from economically disadvantaged background.However, due to' +
+      'infrastructure and lack of better learning opportunity for English & Computer Science there is high drop outs from Government schools.The parents bear the burden of Loan ' +
+      'from private lenders to ensure quality education to their Children for their bright future.This puts debt burden on parents and Government schools are often shut down due to' +
+      'very low strength of students hence this leads to deprivation of Social justice to the Children of the parents who are daily wage earners.Most of the students who seek' +
+      'education in Government Schools are the Children of Daily wage earner & Farming community. <br/>' +
+      '<br/>' +
+      'The “School in Cloud” program tries to eradicate this concern by taking English and Computer classes through Skype to the students in government schools.Which will enable' +
+      'the Children who cannot afford Private schools to continue their education in Government schools and also allow parents to seek education from government schools thus' +
+      'safeguarding themselves from the burden of debt.<br/>' +
+      '<br/>' +
+      'Online Classes are easy way to reach out & contribute to the society by the Volunteers across globe with a commitment of One hour a Week.Our initiative leverages' +
+      'technology to connect volunteers from various parts of world with the students which acts as a motivational factor & an exciting mode of learning for them.The initiative also' +
+      'has enabled many Government school teachers to have an opportunity to learn usage of technology and Computers. <br/>' +
+      '<br/>' +
+      'We conduct classes in 22 Government schools in remote villages of Tamil Nadu, India across 9 Districts covering over 3830 Students every week with over 3475 person hours of' +
+      'effort put by Volunteers who teach English, Math & Computer subjects by 117 Teaching & 22 Non Teaching volunteers per month.This sustained initiative not only brings' +
+      'education to kids at no expense to their parents, but also establishes a highly repeatable model that can be deployed at scale.<br/>' +
+      '<br/>' +
+      'Since the permission from the District education officer was available, the headmasters were very cooperative in enabling the sessions.We can very clearly see the' +
+      'development of Students Confidence in interacting with new people, learning the language & improvement in Communication along with thought process.This initiative not' +
+      'only brings education to Children in a very attractive way, this also comes at no expense to the parents and is a simple model that can be deployed at large scale.<br/>' +
+      '<br/>' +
+      'Hence the need for these sessions were determined as important & beneficial.';
+    return pageDescription;
+  }
 }
 
 //https://www.npmjs.com/package/ng-image-slider
