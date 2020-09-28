@@ -64,7 +64,7 @@ const PageDescriptionData = {
 };
 const NewsData = [
   {
-    id: 5,
+    id: 8,
     url: 'https://www.youtube.com/embed/WFfKKui_m4Q',
     type: 'video',
     title: 'Volunteer Arthi sharing Skype Tutoring Experience',
@@ -74,7 +74,7 @@ const NewsData = [
       'Volunteer Aarthi Prabhakaran sharing her journey with OurVillageOurResponsiblity team. She is one of our contributors for our society, tutoring English for Govt School Students and sharing her valuable Skype Class experience.',
   },
   {
-    id: 4,
+    id: 7,
     url: 'https://www.youtube.com/embed/SFBeDkASZvY',
     type: 'video',
     title: 'DIGITAL BOARD for Viruthunagar Kottaiyur Village Government School',
@@ -84,13 +84,43 @@ const NewsData = [
       'Viruthunagar Kottaiyur Village Government School receives DIGITAL BOARD with the help of Tamil people residing in AMERICA.  This helps for them to setup SMART CLASS.',
   },
   {
-    id: 3,
+    id: 6,
     url: 'https://www.youtube.com/embed/3eLgnPDbMlk',
     type: 'video',
     title: 'NGO contribution for Village Development',
     village: 'Kottaiyur',
     district: 'Virudhunagar',
     description: 'How Tamil NGO can contribute for their Village Development.',
+  },
+  {
+    id: 5,
+    url: 'https://www.youtube.com/embed/FKpLKzLjGr8',
+    type: 'video',
+    title: 'Pudhiya Thalaimurai coverage about OVOR English Skype Classes',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description:
+      'On behalf of Ourvillageourresponsibility team I am Extremely happy to see impact created by each volunteer among the students. Beyond being a role model I am very proud that the volunteers are able to make the change within the students. I see them confident in speaking with anyone , great change in body language. <br/> <br/> Kudos to all the volunteers as this is not possible without you all. Thank you Senthil Sir for giving us this opportunity.',
+  },
+  {
+    id: 4,
+    url: 'https://www.youtube.com/embed/t2hQYuDmxi4',
+    type: 'video',
+    title: 'Road Laid and Encroachment Removed',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description:
+      'We have been following up for many civics work from the Kottaiyur Village Panchayat authorities Virudhunagar District. <br/> <br/>At last after 3 years we are able to see new road laid from Kottaiyur to Sundarapandiam Village.  <br/> <br/>We were able to accomplish this through CM Cell. From removal of TASMAC , repair work in water tank, street light, raid on plastic covers in shops, removal of encroachments etc we have been able to successfully leverage CM Cell, PM website, RTI etc to get things done.',
+  },
+  {
+    id: 3,
+    url: 'https://www.youtube.com/embed/kk_fY10MHDA',
+    type: 'video',
+    title: 'Positive Impact for our Classes on English through Skype',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description:
+      'Very happy to see the positive impact of our Classes on English through Skype. Appreciate the effort of volunteers from Ourvillageourresponsibility & Emelda Queen Madam. <br/><br/> Very happy to hear the number of students increased this year and we are happy to be part the development of students in every way possible.<br/><br/>Congratulations Sneha for being the chess champion & Congratulations to all the teachers for continuous growth',
   },
   {
     id: 2,

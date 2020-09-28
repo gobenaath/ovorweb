@@ -16,7 +16,7 @@ export class InfrastructureBackendService {
 
 const SchoolActivitiesData = [
   {
-    id: 9,
+    id: 13,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if5_2.jpg',
     title: 'Government High School',
     subTitle:
@@ -42,6 +42,99 @@ const SchoolActivitiesData = [
         ],
       },
     ],
+  },
+  {
+    id: 12,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if7_1.jpg',
+    title: 'Note of Appreciation For Students',
+    subTitle:
+      'On behalf of Ourvillageourresponsibility team Note of appreciation to Vaishnavi, Bhairavi, Dhanalakshmi and Kaleeswari from Government high school, Thambipatti. We have gifted them science equipment to develop primitive farming from Lets Make Education Simple team.',
+    village: 'Thambipatti',
+    district: 'Virudhunagar',
+    subSection: {
+      heading: 'Special thanks to Premanand Sethurajan',
+    },
+    htmlContent:
+      '<h5>The achievement of the students were:</h5><ul class="list-group"><li class="list-group-item">Promptly completing their English homework</li><li class="list-group-item">Confidently presenting it in the class and reading it aloud</li><li class="list-group-item">Being able to answer questions and explain what they had written</li></ul>',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if7_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if7_2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 11,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if8_1.jpg',
+    title: 'Wedding Anniversary contribution for Infrastructure Development',
+    subTitle:
+      'In memory of the wedding anniversary of Thiru Akhileshraj and Thirumathi Punidhalakshmi, who is working in the public works department at Adi Dravidar Government Higher Secondary School and Primary School, Rajapalayam Union, Virudhunagar District, wants to contribute for school infrastructure development . In cooperation with Ourvillageourresponsibility, painting and painting work is going on well...',
+    village: 'Sundhararajapuram',
+    district: 'Virudhunagar',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if8_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if8_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if8_3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if8_4.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if9_1.jpg',
+    title: 'NEET Book Donation from Thinnai NGO',
+    subTitle:
+      'NEET books are donated to Anna Marumalarchi library in Maharajapuram, Virudhunagar district.',
+    description:
+      'Thanks to Thinnai NGO for donating NEET books.  NEET books are donated to Anna Marumalarchi library in Maharajapuram, Virudhunagar district. These books are available free of cost to be accessed by the Government school students in and around Watrap Taluk and beyond on showing their ID cards. <br/> Education will continue to remain close to my heart and would like to thank for all the support from Krishore Karthik Rajan Ernesto & all the volunteers for taking initiative approaching GOVT officials to establish Anna Marumalarchi library in Maharajapuram, Virudhunagar district.',
+    subSection: {
+      heading: 'Special thanks to Thinnai Senthil',
+    },
+    village: 'Maharajapuram',
+    district: 'Virudhunagar',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if9_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if9_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if9_3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/schoolActivities/if9_4.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_1.jpg',
+    title: 'Educational Drawing & Painting Work',
+    subTitle:
+      'We are happy to share that Ourvillageourresponsibility team has completed the educational drawing & painting work in Government adi dravidar welfare high school , Sundararajapuram, Virudhunagar district.',
+    village: 'Sundararajapuram',
+    district: 'Virudhunagar',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_4.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_5.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_6.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_7.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_8.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_9.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_10.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_11.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va4_12.jpg',
+        ],
+      },
+    ],
+    fb: '',
   },
   {
     id: 8,

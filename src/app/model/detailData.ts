@@ -12,11 +12,13 @@ class DetailData extends HomeData {
   compareImages?: CompareImage[];
   commonImages?: CompareImage[];
   video?: boolean;
+  fb?: string;
+  youtube?: string;
 }
 
 class SubSection {
   heading?: string;
-  keyValueData: KeyValue[];
+  keyValueData?: KeyValue[];
 }
 
 export { DetailData, SubSection };

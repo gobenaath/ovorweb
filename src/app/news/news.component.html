@@ -8,9 +8,7 @@
       <div class="col-lg-6">
         <p class="normal-sub-heading-2">{{ data.title }}</p>
         <div>
-          <p>
-            {{ data.description }}
-          </p>
+          <p [innerHTML]="data.description"></p>
           <a *ngIf="data.type !== 'video'" [routerLink]="['/detailActivity', 'ns', data.id]">
             <h5 class="text-info">Click for more info...</h5>
           </a>

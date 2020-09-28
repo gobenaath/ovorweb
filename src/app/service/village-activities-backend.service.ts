@@ -14,6 +14,39 @@ export class VillageActivitiesBackendService {
 
 const VillageActivitiesData = [
   {
+    id: 5,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_6.jpg',
+    title: 'Clearing Karuvellam Trees and other Trash fillings',
+    subTitle:
+      'Volunteers and officials help clearing ground from Karuvellam and other trash fillings.',
+    description:
+      'Karuvellam and other Trash were cleared in Mengan town in Maharajapuram Panchayat, Virudhunagar District.  Thank you very much to Malathi Union Eng for organizing this  and also thanks to Union Officers, Maharajapuram Panchayat Union Secretary, OurVillageOurResponsibility crew and Mattrame Namadhu Valarchi members.  Thanks to Mr. Suresh, Virudhunagar Project Manager, for guiding, encouraging and sharing many useful information for this event',
+    village: 'Maharajapuram',
+    district: 'Virudhunagar',
+    compareImages: [
+      {
+        title: 'Ground cleared from Karuvellam and Trash',
+        beforeImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_1.jpg',
+        ],
+        afterImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_7.jpg',
+        ],
+      },
+    ],
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_3.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_4.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_5.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va5_6.jpg',
+        ],
+      },
+    ],
+  },
+  {
     id: 4,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/villageActivities/va3_2.jpg',
     title: 'Grama Sabha Gathering',

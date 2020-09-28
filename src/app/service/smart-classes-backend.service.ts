@@ -97,6 +97,32 @@ const PageDescriptionData = {
 
 const SmartClassPageData = [
   {
+    id: 8,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm13_1.jpg',
+    title: '3 more GOVT schools installed with SMART DIGITAL BOARDS',
+    subTitle: 'Smart Class Setup',
+    village: 'Maharajapuram',
+    district: 'Virudhunagar',
+    completed: true,
+    description:
+      'We are extremely happy to share with you all that now we have installed “SMART DIGITAL BOARD CLASSROOM “ in 10 government schools in Tamilnadu',
+    htmlContent:
+      '<h5>Yesterday we installed “SMART DIGITAL BOARDS” in 3 government schools in Virudhunagar district</h5><ul class="list-group"><li class="list-group-item">Pups Maharajapuram</li><li class="list-group-item">Pups Ayan Karisalkulam</li><li class="list-group-item">Valayapatti School</li></ul>',
+    subSection: {
+      heading:
+        'We would like to thank SWFTRUST & this is a project which is being funded by State Government of Tamilnadu through "SELF SUFFICIENCY SCHEME"',
+    },
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm13_1.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm13_2.jpg',
+          'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm13_3.jpg',
+        ],
+      },
+    ],
+  },
+  {
     id: 7,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/smartclasses/sm12_1.jpg',
     title: 'Panchayat Union Middle School',

@@ -26,7 +26,7 @@
       <div class="card-header text-center ">
         <h4 class="sub-heading">{{detailData.subTitle}}</h4>
         <div *ngIf="detailData.description">
-          <p class="font-dancing-script">{{detailData.description}}</p>
+          <p class="font-dancing-script" [innerHTML]="detailData.description"></p>
         </div>
 
       </div>
