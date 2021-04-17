@@ -30,6 +30,7 @@ import { CardDisplayComponent } from './shared/card-display/card-display.compone
 import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
 import { SimpleModalComponent } from './shared/simple-modal/simple-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AwardComponent } from './award/award.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CardDisplayComponent,
     UpcomingProjectsComponent,
     SimpleModalComponent,
+    AwardComponent,
   ],
   imports: [
     BrowserModule,

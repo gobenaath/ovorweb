@@ -63,7 +63,7 @@ export class SkypeClassesComponent implements OnInit {
     pageDescription.title = 'Skype Class';
     pageDescription.description =
       'Government schools in Tamil Nadu, India are the most Economical and feasible mode to seek Education for kids from economically disadvantaged background.However, due to' +
-      'infrastructure and lack of better learning opportunity for English & Computer Science there is high drop outs from Government schools.The parents bear the burden of Loan ' +
+      'infrastructure and lack of better learning opportunity for English, Math & Computer Science there is high drop outs from Government schools.The parents bear the burden of Loan ' +
       'from private lenders to ensure quality education to their Children for their bright future.This puts debt burden on parents and Government schools are often shut down due to' +
       'very low strength of students hence this leads to deprivation of Social justice to the Children of the parents who are daily wage earners.Most of the students who seek' +
       'education in Government Schools are the Children of Daily wage earner & Farming community. <br/>' +
@@ -76,8 +76,8 @@ export class SkypeClassesComponent implements OnInit {
       'technology to connect volunteers from various parts of world with the students which acts as a motivational factor & an exciting mode of learning for them.The initiative also' +
       'has enabled many Government school teachers to have an opportunity to learn usage of technology and Computers. <br/>' +
       '<br/>' +
-      'We conduct classes in 22 Government schools in remote villages of Tamil Nadu, India across 9 Districts covering over 3830 Students every week with over 3475 person hours of' +
-      'effort put by Volunteers who teach English, Math & Computer subjects by 117 Teaching & 22 Non Teaching volunteers per month.This sustained initiative not only brings' +
+      'We conduct classes in 38 Government schools in remote villages of Tamil Nadu, India across 13 Districts covering over 5000 Students every week with over 3475 person hours of' +
+      'effort put by Volunteers who teach English, Math & Computer subjects by 180 Teaching and  Non Teaching volunteers per month.This sustained initiative not only brings' +
       'education to kids at no expense to their parents, but also establishes a highly repeatable model that can be deployed at scale.<br/>' +
       '<br/>' +
       'Since the permission from the District education officer was available, the headmasters were very cooperative in enabling the sessions.We can very clearly see the' +

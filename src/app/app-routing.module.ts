@@ -1,3 +1,4 @@
+import { AwardComponent } from './award/award.component';
 import { SkypeClassesComponent } from './skype-classes/skype-classes.component';
 import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'skypeClasses', component: SkypeClassesComponent },
   { path: 'villageActivities', component: VillageActiviesComponent },
   { path: 'upcomingProjects', component: UpcomingProjectsComponent },
+  { path: 'awards', component: AwardComponent },
   { path: 'detailActivity/:src/:id', component: DetailPageComponent },
 ];
 

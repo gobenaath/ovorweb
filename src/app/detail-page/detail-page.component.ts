@@ -1,3 +1,4 @@
+import { AwardsBackendService } from './../service/awards-backend.service';
 import { InfrastructureBackendService } from './../service/infrastructure-backend.service';
 import { NewsBackendService } from './../service/news-backend.service';
 import { VillageActivitiesBackendService } from './../service/village-activities-backend.service';
@@ -5,6 +6,7 @@ import { SmartClassesBackendService } from './../service/smart-classes-backend.s
 import { Component, OnInit } from '@angular/core';
 import { DetailData } from '../model/detailData';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail-page',
@@ -18,7 +20,9 @@ export class DetailPageComponent implements OnInit {
     private villageActivitiesBackendService: VillageActivitiesBackendService,
     private newsBackendService: NewsBackendService,
     private infrastructureBackendService: InfrastructureBackendService,
-    private route: ActivatedRoute
+    private awardsBackendService: AwardsBackendService,
+    private route: ActivatedRoute,
+    public sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -69,6 +73,23 @@ export class DetailPageComponent implements OnInit {
         error: (err) =>
           console.error('Error while retreiving is detail data: ' + err),
       });
+      
+    } else if (src === 'aw') {
+      this.awardsBackendService.getAwards().subscribe({
+        next: (x) => {
+          this.detailData = x.find(
+            (data) => data.id === Number(this.route.snapshot.params.id)
+          );
+        },
+        error: (err) =>
+          console.error('Error while retreiving is detail data: ' + err),
+      });
+      
     }
+    
+  }
+
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

@@ -62,7 +62,17 @@ const PageDescriptionData = {
     },
   ],
 };
-const NewsData = [
+const NewsData = [  
+  {
+    id: 9,
+    url: 'https://www.youtube.com/embed/MQhnURxNzfc',
+    type: 'video',
+    title: 'Thinnai Senthil Sir appreciation for Smart Class Volunteers',
+    village: 'Kottaiyur',
+    district: 'Virudhunagar',
+    description:
+      'Very happy to hear great feedback about our initiative from Thinnai Senthil Sir. We are extremely happy to have been associated with the Government school in Allinagaram & the students. Thank you very much sir for your appreciation & this will be great motivation to our volunteers',
+  },
   {
     id: 8,
     url: 'https://www.youtube.com/embed/WFfKKui_m4Q',

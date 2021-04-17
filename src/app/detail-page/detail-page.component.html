@@ -22,7 +22,7 @@
 
 
 
-    <div class="card">
+    <div class="card" *ngIf="detailData.subTitle">
       <div class="card-header text-center ">
         <h4 class="sub-heading">{{detailData.subTitle}}</h4>
         <div *ngIf="detailData.description">
@@ -36,6 +36,7 @@
           <b>{{keyData.key}}</b> : {{keyData.value}}
         </p>
       </div>
+      
 
       <div class="card-body text-left bg-fifth m-3" *ngIf="detailData.htmlContent">
         <div class="p-2">
@@ -51,6 +52,19 @@
         <p class="card-text" *ngFor="let keyData of detailData.subSection.keyValueData">
           <span> <b>{{keyData.key}} : </b></span> {{keyData.value}}
         </p>
+      </div>
+    </div>
+
+    <div *ngIf="detailData.youtube">
+      <div class="card mt-3">        
+        <div class="card-body text-center bg-main normal-sub-heading">
+          
+          <div class="m-3">
+            <iframe width="300" height="270" [src]="sanitizeUrl(detailData.youtube)">
+          </iframe>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -109,6 +123,8 @@
 
       </div>
     </div>
+
+    
 
 
   </div>

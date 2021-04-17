@@ -22,8 +22,8 @@ export class SmartClassesBackendService {
 const PageDescriptionData = {
   title: 'School Activities',
   description:
-    'We conduct classes in 22 Government schools in remote villages of Tamil Nadu, India across 9 Districts covering over 3830 Studen ts every week' +
-    'with over 3475 person hours of effort put by Volunteers who teach English, Math & Computer subjects by 117 Teaching & 22 Non Tea ching' +
+    'We conduct classes in 38 Government schools in remote villages of Tamil Nadu, India across 13 Districts covering over 5000 Students every week' +
+    'with over 3475 person hours of effort put by Volunteers who teach English, Math & Computer subjects by 180 Teaching and  Non Teaching' +
     'volunteers per month.This sustained initiative not only brings education to kids at no expense to their parents, but also es tab lishes a highly' +
     'repeatable model that can be deployed at scale.',
   items: [

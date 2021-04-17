@@ -1,0 +1,15 @@
+<app-header></app-header>
+<section class="mx-auto bg-main">
+
+  <div class="container-fluid">
+    <app-page-description [pageDescription]="pageDescription">
+    </app-page-description>
+    <div class="row bg-second">
+      <div class="col-lg-4 col-sm-10 mx-auto m-4" *ngFor="let data of awardsData">
+        <app-card-display [data]="data" src="aw"></app-card-display>
+      </div>
+    </div>
+  </div>
+
+</section>
+<app-footer></app-footer>
