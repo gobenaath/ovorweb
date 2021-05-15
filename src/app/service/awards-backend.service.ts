@@ -14,6 +14,18 @@ export class AwardsBackendService {
 
 const AwardsData = [
   {
+    id: 3,
+    url: 'https://ovor.s3-us-west-2.amazonaws.com/awards/awd3_1.jpg',
+    title: 'Award from JCI Virudhunagar Trust',
+    commonImages: [
+      {
+        otherImages: [
+          'https://ovor.s3-us-west-2.amazonaws.com/awards/awd3_1.jpg',
+        ],
+      },
+    ]    
+  },
+  {
     id: 2,
     url: 'https://ovor.s3-us-west-2.amazonaws.com/awards/awd1_2.jpg',
     title: 'Social Welfare Funds Award',

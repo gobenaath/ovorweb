@@ -64,6 +64,14 @@ const PageDescriptionData = {
 };
 const NewsData = [  
   {
+    id: 10,
+    url: 'https://www.youtube.com/embed/T1FQxeuATSA ',
+    type: 'video',
+    title: 'Oxygen Cylinders and Concentrator Donations ',    
+    description:
+      'OVOR Team donated 5 Oxygen Cylinders to Kilpauk Medical College to extend helping hands during Covid Pandemic.  Thanks to all donors.',
+  },
+  {
     id: 9,
     url: 'https://www.youtube.com/embed/MQhnURxNzfc',
     type: 'video',
