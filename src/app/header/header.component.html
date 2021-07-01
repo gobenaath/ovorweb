@@ -56,9 +56,34 @@
       <li>
         <a routerLink="/about" [className]="urlString === '/about' ? 'active' : ''">About</a>
       </li>
+      <li>
+        <a (click)="openModal(template)">Donation</a>
+      </li>
     </ul>
   </nav>
 </header>
 
 
 </html>
+
+
+<ng-template #template>
+  <div class="modal-header" style="padding: 10px;">
+    <h4 class="modal-title pull-left"> {{DonationData.title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+      <i class="fa fa-window-close"></i>
+    </button>
+  </div>
+  <div class="modal-body" style="padding: 10px;">
+    <p [innerHTML]='DonationData.description' *ngIf="DonationData.description"> </p>
+    <div *ngIf="DonationData" style="padding: 10px;" >
+      <ul *ngFor="let item of DonationData.items">
+        <li>
+          <b>{{item.title}} :</b> {{item.value}} 
+          
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
