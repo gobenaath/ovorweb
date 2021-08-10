@@ -1,3 +1,4 @@
+import { OnGoingProjectsComponent } from './on-going-projects/on-going-projects.component';
 import { AwardComponent } from './award/award.component';
 import { SkypeClassesComponent } from './skype-classes/skype-classes.component';
 import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'upcomingProjects', component: UpcomingProjectsComponent },
   { path: 'awards', component: AwardComponent },
   { path: 'detailActivity/:src/:id', component: DetailPageComponent },
+  { path: 'onGoingProjects', component: OnGoingProjectsComponent },
 ];
 
 @NgModule({

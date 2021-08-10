@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { DetailData } from '../model/detailData';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { OnGoingProjectsBackendService } from '../service/ongoingprojects-backend.service';
 
 @Component({
   selector: 'app-detail-page',
@@ -21,6 +22,7 @@ export class DetailPageComponent implements OnInit {
     private newsBackendService: NewsBackendService,
     private infrastructureBackendService: InfrastructureBackendService,
     private awardsBackendService: AwardsBackendService,
+    private onGoingProjectsBackendService: OnGoingProjectsBackendService,
     private route: ActivatedRoute,
     public sanitizer: DomSanitizer
   ) {}
@@ -31,7 +33,17 @@ export class DetailPageComponent implements OnInit {
     );
 
     let src: string = this.route.snapshot.params.src;
-    if (src === 'va') {
+    if (src === 'ip') {
+      this.onGoingProjectsBackendService.getOnGoingProjects().subscribe({
+        next: (x) => {
+          this.detailData = x.find(
+            (data) => data.id === Number(this.route.snapshot.params.id)
+          );
+        },
+        error: (err) =>
+          console.error('Error while retreiving vabdetail data: ' + err),
+      });
+    } else if (src === 'va') {
       this.villageActivitiesBackendService.getVillageActivities().subscribe({
         next: (x) => {
           //this.imageObject = x;

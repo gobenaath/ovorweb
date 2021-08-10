@@ -31,6 +31,7 @@ import { UpcomingProjectsComponent } from './upcoming-projects/upcoming-projects
 import { SimpleModalComponent } from './shared/simple-modal/simple-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AwardComponent } from './award/award.component';
+import { OnGoingProjectsComponent } from './on-going-projects/on-going-projects.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AwardComponent } from './award/award.component';
     UpcomingProjectsComponent,
     SimpleModalComponent,
     AwardComponent,
+    OnGoingProjectsComponent,
   ],
   imports: [
     BrowserModule,
